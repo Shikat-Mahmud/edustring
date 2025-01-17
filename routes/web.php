@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\GalleryController;
+use App\Http\Controllers\Admin\SubscriberController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\SettingsController;
@@ -58,6 +59,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/add-gallery', [GalleryController::class, 'create'])->name('create.gallery');
     Route::post('/add-gallery', [GalleryController::class, 'store'])->name('store.gallery');
     Route::post('/destroy-gallery/{id}', [GalleryController::class, 'destroy'])->name('destroy.gallery');
+
+    Route::resource('/subcribers', SubscriberController::class);
 
     // all settings route
     Route::get('/general-setting', [SettingsController::class, 'index'])->name('general.setting');

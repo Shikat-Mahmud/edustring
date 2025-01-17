@@ -21,12 +21,17 @@
                 </li>
                 <li class="pc-item pc-hasmenu">
                     <a href="{{ route('admin.index') }}" class="pc-link"><span class="pc-micon">
-                            <i class="ph ph-gauge"></i></span><span class="pc-mtext">Dashboard</span></a>
+                    <i class="ph ph-gauge"></i></span><span class="pc-mtext">Dashboard</span></a>
                 </li>
 
                 <li class="pc-item pc-hasmenu">
                     <a href="{{ route('gallery.list') }}" class="pc-link"><span class="pc-micon">
-                            <i class="ph ph-image"></i></span><span class="pc-mtext">Gallery Photos</span></a>
+                    <i class="ph ph-image"></i></span><span class="pc-mtext">Gallery Photos</span></a>
+                </li>
+
+                <li class="pc-item pc-hasmenu">
+                    <a href="{{ route('subcribers.index') }}" class="pc-link"><span class="pc-micon">
+                    <i class="ph ph-users"></i></span><span class="pc-mtext">Subscribers</span></a>
                 </li>
 
                 @if (auth()->check() &&
