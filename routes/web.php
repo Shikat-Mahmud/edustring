@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Admin\ApplicationController;
+use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\Admin\SubscriberController;
 use App\Http\Controllers\ProfileController;
@@ -61,6 +63,8 @@ Route::middleware('auth')->group(function () {
     Route::post('/destroy-gallery/{id}', [GalleryController::class, 'destroy'])->name('destroy.gallery');
 
     Route::resource('/subcribers', SubscriberController::class);
+    Route::resource('/applications', ApplicationController::class);
+    Route::resource('/contacts', ContactController::class);
 
     // all settings route
     Route::get('/general-setting', [SettingsController::class, 'index'])->name('general.setting');

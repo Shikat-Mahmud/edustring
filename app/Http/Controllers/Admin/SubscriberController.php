@@ -14,7 +14,7 @@ class SubscriberController extends Controller
         return view('admin.main.subscriber.index', compact('subscribers'));
     }
 
-    public function destroy(string $id)
+    public function destroy(int $id)
     {
         Subscriber::find($id)->delete();
         return redirect()->back()->with('success', 'Subscriber deleted successfully.');
