@@ -23,7 +23,7 @@
                     <p class="text-edgray font-medium mb-[41px]">Edustring Can Fulfil Your International Education Dream
                         As Per Your Best Fit with world top universities and collages.</p>
                     <div class="flex flex-wrap gap-[10px]">
-                        <a href="{{ route('contact') }}"
+                        <a href="{{ route('apply') }}"
                             class="ed-btn !bg-transparent border border-edpurple !text-edpurple hover:!bg-edpurple hover:!text-white">Apply Online</a>
                         <a href="{{ route('about') }}"
                             class="ed-btn !bg-transparent border border-black !text-black hover:!bg-black hover:!text-white">Discover</a>
@@ -226,7 +226,7 @@
                         <h6 class="ed-section-sub-title">Admission</h6>
                         <h2 class="ed-section-title !text-[30px] pb-[42px] lg:pb-0 mb-[40px] lg:mb-[20px]">Admission
                             Process</h2>
-                        <a href="{{ route('contact') }}" class="ed-btn">Admission Now</a>
+                        <a href="{{ route('apply') }}" class="ed-btn">Admission Now</a>
                     </div>
                 </div>
 
@@ -292,7 +292,7 @@
                         This ensures students have access to the best educational opportunities globally.</p>
 
                     <div class="flex flex-wrap gap-x-[24px] gap-y-[15px]">
-                        <a href="{{ route('contact') }}" class="ed-btn">Apply Now</a>
+                        <a href="{{ route('apply') }}" class="ed-btn">Apply Now</a>
                         <div class="flex items-center gap-[16px]">
                             <span
                                 class="icon bg-edyellow w-[44px] aspect-square rounded-full outline-[1px] outline outline-edyellow outline-offset-[2px] flex items-center justify-center">
@@ -378,7 +378,7 @@
                     <h2 class="ed-section-title !text-white mb-[36px]">20% Offer For Very First 10 <span
                             class="font-normal text-[40px] xxl:text-[35px] xl:text-[30px] xs:text-[28px] xxs:text-[25px]">Student’s</span></h2>
                     <div class="flex flex-wrap gap-[16px]">
-                        <a href="{{ route('contact') }}"
+                        <a href="{{ route('apply') }}"
                             class="ed-btn !bg-edyellow !text-black hover:!bg-edblue hover:!text-white">Become a student</a>
                         {{-- <a href="#" class="ed-btn !bg-transparent !text-white border border-white hover:!bg-white hover:!text-edblue">Become a teacher</a> --}}
                     </div>

@@ -45,7 +45,7 @@
                             </g>
                         </svg>
                     </button>
-                    <a href="{{ route('contact') }}" class="ed-btn to-go-to-sidebar-in-mobile lg:m-[20px]">apply now</a>
+                    <a href="{{ route('apply') }}" class="ed-btn to-go-to-sidebar-in-mobile lg:m-[20px]">apply now</a>
                 </div>
             </div>
 

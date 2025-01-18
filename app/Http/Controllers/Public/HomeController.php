@@ -22,6 +22,11 @@ class HomeController extends Controller
         return view("public.pages.contact");
     }
 
+    public function apply()
+    {
+        return view("public.pages.apply");
+    }
+
     public function gallery()
     {
         return view("public.pages.gallery");

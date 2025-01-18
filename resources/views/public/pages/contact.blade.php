@@ -1,5 +1,5 @@
 @extends('public.layout.master')
-@section('title', 'About')
+@section('title', 'Contact')
 
 @section('content')
     <!-- BREADCRUMB SECTION START -->

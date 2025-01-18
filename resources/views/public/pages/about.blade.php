@@ -127,7 +127,7 @@
                     </p>
                 </div>
 
-                <a href="{{ route('contact') }}"
+                <a href="{{ route('apply') }}"
                     class="ed-btn !bg-transparent border border-edpurple !text-edpurple hover:!bg-edpurple hover:!text-white">Apply
                     Now</a>
             </div>
