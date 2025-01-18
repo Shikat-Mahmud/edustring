@@ -247,13 +247,13 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     };
 
-    document.addEventListener("click", (e) => {
-        if (!edCart.contains(e.target) && edCart.classList.contains("active") && !edCartOpenerBtn.contains(e.target)) {
-            edCart.classList.remove("active");
-            edOverlay.classList.remove("active");
-            document.body.style.overflow = "";
-        }
-    });
+    // document.addEventListener("click", (e) => {
+    //     if (!edCart.contains(e.target) && edCart.classList.contains("active") && !edCartOpenerBtn.contains(e.target)) {
+    //         edCart.classList.remove("active");
+    //         edOverlay.classList.remove("active");
+    //         document.body.style.overflow = "";
+    //     }
+    // });
 
     // search js
     const edSearchOpenerBtn = document.querySelector(".ed-search-opener-btn");

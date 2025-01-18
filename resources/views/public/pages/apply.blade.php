@@ -57,13 +57,10 @@
                         class="text-[40px] md:text-[35px] sm:text-[30px] xxs:text-[28px] font-semibold text-edblue mb-[38px]">
                         Start Your Study Abroad Journey
                     </h1>
-                    {{-- <p class="text-edgray font-normal text-[16px] mb-[38px]">
-                        Submit your application to explore global education opportunities. We are here to guide you every
-                        step of the way.
-                    </p> --}}
 
-                    <form action="#" enctype="multipart/form-data" method="POST"
+                    <form action="{{ route('applications.store') }}" enctype="multipart/form-data" method="POST"
                         class="grid grid-cols-2 xxs:grid-cols-1 gap-[30px] xs:gap-[20px] text-[16px]">
+                        @csrf
                         <!-- First Name -->
                         <div>
                             <label for="ed-first-name" class="font-lato font-semibold text-edblue block mb-[12px]">First
@@ -108,7 +105,7 @@
                                 class="font-lato font-semibold text-edblue block mb-[12px]">Program*</label>
                             <select name="program" id="ed-program"
                                 class="border border-[#ECECEC] h-[55px] px-[20px] xs:px-[15px] rounded-[4px] w-full focus:outline-none bg-white">
-                                <option value="" disabled selected>Select Program</option>
+                                <option value="" disabled selected>Select Desired Program</option>
                                 <option value="Bachelor">Bachelor</option>
                                 <option value="Masters">Masters</option>
                                 <option value="Diploma">Diploma</option>
@@ -122,15 +119,23 @@
                         <div>
                             <label for="ed-country"
                                 class="font-lato font-semibold text-edblue block mb-[12px]">Country</label>
-                            <input type="text" name="country" id="ed-country" placeholder="Preferred Country"
-                                class="border border-[#ECECEC] h-[55px] px-[20px] xs:px-[15px] rounded-[4px] w-full focus:outline-none">
+                            <select name="country" id="ed-country"
+                                class="border border-[#ECECEC] h-[55px] px-[20px] xs:px-[15px] rounded-[4px] w-full focus:outline-none bg-white">
+                                <option value="" disabled selected>Select Desired Country</option>
+                                <option value="United Kingdom">United Kingdom</option>
+                                <option value="India">India</option>
+                                <option value="China">China</option>
+                                <option value="Malaysia">Malaysia</option>
+                                <option value="Australia">Australia</option>
+                                <option value="Others">Others</option>
+                            </select>
                         </div>
 
                         <!-- Subject -->
                         <div>
                             <label for="ed-subject"
                                 class="font-lato font-semibold text-edblue block mb-[12px]">Subject</label>
-                            <select name="program" id="ed-program"
+                            <select name="subject" id="ed-subject"
                                 class="border border-[#ECECEC] h-[55px] px-[20px] xs:px-[15px] rounded-[4px] w-full focus:outline-none bg-white">
                                 <option value="" disabled selected>Select Subject</option>
                                 <option value="Aeronautical Engineering">Aeronautical Engineering</option>
@@ -138,8 +143,10 @@
                                 <option value="Civil Engineering">Civil Engineering</option>
                                 <option value="Computer Science and Engineering">Computer Science and Engineering</option>
                                 <option value="Biotechnology Engineering">Biotechnology Engineering</option>
-                                <option value="Electrical and Electronics Engineering">Electrical and Electronics Engineering</option>
-                                <option value="Electronics and Communication Engineering">Electronics and Communication Engineering</option>
+                                <option value="Electrical and Electronics Engineering">Electrical and Electronics
+                                    Engineering</option>
+                                <option value="Electronics and Communication Engineering">Electronics and Communication
+                                    Engineering</option>
                                 <option value="Automation and Robotics">Automation and Robotics</option>
                                 <option value="Petroleum Engineering">Petroleum Engineering</option>
                                 <option value="Instrumentation Engineering">Instrumentation Engineering</option>
@@ -158,8 +165,10 @@
                                 <option value="Computer Applications">Computer Applications</option>
                                 <option value="Interior Design">Interior Design</option>
                                 <option value="Bachelor of Dental Surgery">Bachelor of Dental Surgery</option>
-                                <option value="Animation, Graphics and Multimedia">Animation, Graphics and Multimedia</option>
-                                <option value="B.Sc. – Nutrition &amp; Dietetics">B.Sc. – Nutrition &amp; Dietetics</option>
+                                <option value="Animation, Graphics and Multimedia">Animation, Graphics and Multimedia
+                                </option>
+                                <option value="B.Sc. – Nutrition &amp; Dietetics">B.Sc. – Nutrition &amp; Dietetics
+                                </option>
                                 <option value="Physiotherapy">Physiotherapy</option>
                                 <option value="Applied Geology">Applied Geology</option>
                                 <option value="Liberal Arts">Liberal Arts</option>
@@ -171,12 +180,14 @@
                                 <option value="Fine Arts">Fine Arts</option>
                                 <option value="Event Management">Event Management</option>
                                 <option value="Integrated Law Course- BA + LL.B">Integrated Law Course- BA + LL.B</option>
-                                <option value="Journalism and Mass Communication">Journalism and Mass Communication</option>
+                                <option value="Journalism and Mass Communication">Journalism and Mass Communication
+                                </option>
                                 <option value="Fashion Designing">Fashion Designing</option>
                                 <option value="Social Work">Social Work</option>
                                 <option value="Travel and Tourism Management">Travel and Tourism Management</option>
                                 <option value="Aviation Courses">Aviation Courses</option>
-                                <option value="Hospitality and Hotel Administration">Hospitality and Hotel Administration</option>
+                                <option value="Hospitality and Hotel Administration">Hospitality and Hotel Administration
+                                </option>
                                 <option value="Design">Design</option>
                                 <option value="Performing Arts">Performing Arts</option>
                                 <option value="History">History</option>

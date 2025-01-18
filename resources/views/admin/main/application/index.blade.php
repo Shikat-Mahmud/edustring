@@ -32,18 +32,18 @@
                                                 <td>
                                                     <div class="d-flex">
                                                         <a class="btn btn-secondary btn-sm me-2"
-                                                            href="{{ route('categories.show', $item->id) }}">View</a>
+                                                            href="{{ route('applications.show', $item->id) }}"><i class="ph ph-eye"></i></a>
 
                                                         <a class="btn btn-info btn-sm me-2"
-                                                            href="{{ route('categories.edit', $item->id) }}">Edit</a>
+                                                            href="{{ route('applications.edit', $item->id) }}"><i class="ph ph-pencil"></i></a>
 
                                                         <form class="deleteForm"
-                                                            action="{{ route('subcribers.destroy', $item->id) }}"
+                                                            action="{{ route('applications.destroy', $item->id) }}"
                                                             method="post">
                                                             @csrf
                                                             @method('DELETE')
                                                             <button type="button"
-                                                                class="btn btn-danger btn-sm btnDelete">Delete</button>
+                                                                class="btn btn-danger btn-sm btnDelete"><i class="ph ph-trash"></i></button>
                                                         </form>
                                                     </div>
                                                 </td>

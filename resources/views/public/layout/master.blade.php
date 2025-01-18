@@ -16,6 +16,9 @@
 
     <!-- custom css -->
     <link rel="stylesheet" href="{{ asset('web/css/style.css') }}">
+
+    {{-- toaster --}}
+    <link rel="stylesheet" href="{{ asset('css/toastr.min.css') }}">
     @stack('style')
 </head>
 
@@ -71,15 +74,38 @@
 
 
     <!-- js -->
+    <script type="text/javascript" src="{{ asset('js/jquery-2.1.1.min.js') }}"></script>
+
     <script src="{{ asset('web/vendor/swiper/swiper-bundle.min.js') }}"></script>
     <script src="{{ asset('web/vendor/fslightbox/fslightbox.js') }}"></script>
     <script src="{{ asset('web/vendor/mixitup/mixitup.min.js') }}"></script>
     <script src="{{ asset('web/vendor/slim-select/slimselect.min.js') }}"></script>
-
     <script src="{{ asset('web/js/main.js') }}"></script>
-
-    <script src="{{ asset('web/js/header-2.js') }}"></script>
     <script src="{{ asset('web/js/accordion.js') }}"></script>
+
+    <!-- Toastr JS -->
+    <script src="{{ asset('js/toastr.min.js') }}"></script>
+    <script>
+        toastr.options = {
+            "closeButton": true,
+            "progressBar": true,
+            "timeOut": 5000,
+            "extendedTimeOut": 1000,
+            "positionClass": "toast-top-right",
+            "preventDuplicates": true,
+            "maxOpened": 3
+        };
+
+        @if (Session::has('success'))
+            toastr.success("{{ Session::get('success') }}");
+        @elseif (Session::has('error'))
+            toastr.error("{{ Session::get('error') }}");
+        @elseif (Session::has('warning'))
+            toastr.warning("{{ Session::get('warning') }}");
+        @elseif (Session::has('info'))
+            toastr.info("{{ Session::get('info') }}");
+        @endif
+    </script>
     @stack('script')
 </body>
 
