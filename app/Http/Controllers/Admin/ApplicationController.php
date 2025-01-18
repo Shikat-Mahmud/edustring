@@ -22,26 +22,31 @@ class ApplicationController extends Controller
 
     public function store(Request $request)
     {
-        $validatedData = $request->validate([
-            'first_name' => 'required|string|max:255',
-            'last_name' => 'nullable|string|max:255',
-            'phone' => 'required|string|max:15',
-            'whatsapp' => 'nullable|string|max:15',
-            'email' => 'nullable|email|max:255',
-            'program' => 'required|string|max:255',
-            'country' => 'nullable|string|max:255',
-            'subject' => 'nullable|string|max:255',
-            'photo' => 'nullable|image|mimes:jpg,jpeg,png',
-        ]);
+        try {
+            $validatedData = $request->validate([
+                'first_name' => 'required|string|max:255',
+                'last_name' => 'nullable|string|max:255',
+                'phone' => 'required|string|max:15',
+                'whatsapp' => 'nullable|string|max:15',
+                'email' => 'nullable|email|max:255',
+                'program' => 'required|string|max:255',
+                'country' => 'nullable|string|max:255',
+                'subject' => 'nullable|string|max:255',
+                'photo' => 'nullable|image|mimes:jpg,jpeg,png',
+            ]);
 
-        if ($request->hasFile('photo')) {
-            $photoPath = $request->file('photo')->store('applications', 'public');
-            $validatedData['photo'] = $photoPath;
+            if ($request->hasFile('photo')) {
+                $photoPath = $request->file('photo')->store('applications', 'public');
+                $validatedData['photo'] = $photoPath;
+            }
+
+            Application::create($validatedData);
+
+            return redirect()->back()->with('success', 'Application submitted successfully.');
+        } catch (\Illuminate\Validation\ValidationException $e) {
+            $errorMessage = $e->validator->errors()->first();
+            return redirect()->back()->with('error', $errorMessage);
         }
-
-        Application::create($validatedData);
-
-        return redirect()->back()->with('success', 'Application submitted successfully.');
     }
 
     public function show(int $id)

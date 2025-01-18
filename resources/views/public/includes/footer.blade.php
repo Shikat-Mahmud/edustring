@@ -56,10 +56,11 @@
                         updates.</p>
 
                     <!-- newsltr form -->
-                    <form class="border border-white/20 rounded-full flex h-[56px] p-[4px]">
+                    <form action="{{route('subcribers.store')}}" method="POST" class="border border-white/20 rounded-full flex h-[56px] p-[4px]">
+                        @csrf
                         <input type="email" name="email" placeholder="Enter Email Address"
-                            class="text-[14px] bg-transparent w-full rounded-full focus:outline-none px-[20px]">
-                        <button
+                            class="text-[14px] bg-transparent w-full rounded-full focus:outline-none px-[20px]" required>
+                        <button type="submit"
                             class="bg-edyellow rounded-full aspect-square flex items-center justify-center hover:bg-edpurple"><img
                                 src="{{ asset('web/img/icon/submit-icon.svg') }}" alt="icon"></button>
                     </form>
