@@ -44,6 +44,11 @@
                             <i class="ph ph-users"></i></span><span class="pc-mtext">Subscribers</span></a>
                 </li>
 
+                <li class="pc-item pc-hasmenu">
+                    <a href="{{ route('invests.index') }}" class="pc-link"><span class="pc-micon">
+                            <i class="ph ph-coin"></i></span><span class="pc-mtext">Invests</span></a>
+                </li>
+
                 @if (auth()->check() &&
                         auth()->user()->hasAnyPermission(['update-general-setting', 'update-email-setting', 'cache-clear']))
                     <li class="pc-item pc-hasmenu">

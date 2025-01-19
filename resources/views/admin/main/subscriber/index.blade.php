@@ -33,7 +33,7 @@
                                                             @csrf
                                                             @method('DELETE')
                                                             <button type="button"
-                                                                class="btn btn-danger btn-sm btnDelete">Delete</button>
+                                                                class="btn btn-danger btn-sm btnDelete"><i class="ph ph-trash"></i></button>
                                                         </form>
                                                     </div>
                                                 </td>

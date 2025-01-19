@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\ApplicationController;
 use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\GalleryController;
+use App\Http\Controllers\Admin\InvestController;
 use App\Http\Controllers\Admin\SubscriberController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -66,6 +67,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('/subcribers', SubscriberController::class);
     Route::resource('/applications', ApplicationController::class);
     Route::resource('/contacts', ContactController::class);
+    Route::resource('/invests', InvestController::class);
 
     // all settings route
     Route::get('/general-setting', [SettingsController::class, 'index'])->name('general.setting');
