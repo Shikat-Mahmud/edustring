@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('invests', function (Blueprint $table) {
             $table->id();
             $table->string('sector');
-            $table->string('name');
+            $table->string('name')->nullable();
             $table->string('amount');
             $table->timestamps();
         });
