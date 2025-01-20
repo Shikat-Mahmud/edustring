@@ -1,4 +1,7 @@
 <!-- HEADER SECTION START -->
+@php
+    $settings = generalSettings();
+@endphp
 <header
     class="absolute z-[99] top-0 inset-x-[100px] xxl:inset-x-[30px] xl:inset-x-0 bg-white rounded-bl-[10px] rounded-br-[10px]">
 
@@ -6,7 +9,11 @@
     <div class="px-[30px] xxl:px-[15px] lg:px-[20px] py-[28px] lg:py-[18px] flex justify-between to-be-fixed">
         <div class="logo xxs:max-w-[20%] lg:max-w-[10%]">
             <a href="{{ route('home') }}">
-                <img src="{{ asset('web/img/logo.png') }}" alt="logo" style="height: 60px;" class="logo">
+                @if ($settings->logo)
+                    <img src="{{ asset('storage/' . $settings->logo) }}" alt="logo" style="height: 60px;" class="logo">
+                @else
+                    <img src="{{ asset('web/img/logo.png') }}" alt="logo" style="height: 60px;" class="logo">
+                @endif
             </a>
         </div>
 
