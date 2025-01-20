@@ -70,9 +70,9 @@
                     <!-- video cover -->
                     <div class="relative">
                         <img src="{{ asset('web/img/contact-video-cover.jpg') }}" alt="video cover" class="w-full brightness-[80%]">
-                        <a href="https://youtu.be/5ppDzM8m9lI?si=zml3HbV176DBsZlg" data-fslightbox class="video-btn-shadow w-[58px] aspect-square rounded-full bg-white text-[18px] text-edpurple flex items-center justify-center absolute top-[50%] left-[50%] -translate-y-[50%] -translate-x-[50%]">
+                        {{-- <a href="https://youtu.be/5ppDzM8m9lI?si=zml3HbV176DBsZlg" data-fslightbox class="video-btn-shadow w-[58px] aspect-square rounded-full bg-white text-[18px] text-edpurple flex items-center justify-center absolute top-[50%] left-[50%] -translate-y-[50%] -translate-x-[50%]">
                             <i class="fa-solid fa-play"></i>
-                        </a>
+                        </a> --}}
                     </div>
                 </div>
 

@@ -170,9 +170,9 @@
                         <div class="relative shrink-0 -ml-[202px] lg:-ml-[262px] md:-ml-[202px] xs:-ml-[242px] -mb-[24px]">
                             <img src="{{ asset('web/img/about-2-image-2.png') }}" alt="About Image"
                                 class="border-[8px] border-white rounded-full w-[292px] xs:w-[252px] aspect-square">
-                            <a href="https://youtu.be/5ppDzM8m9lI?si=zml3HbV176DBsZlg" data-fslightbox="gallery"
+                            {{-- <a href="https://youtu.be/5ppDzM8m9lI?si=zml3HbV176DBsZlg" data-fslightbox="gallery"
                                 class="flex items-center justify-center w-[60px] aspect-square bg-white rounded-full text-edyellow absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] before:border before:absolute before:top-[50%] before:-translate-y-[50%] before:left-[50%] before:-translate-x-[50%] before:w-[calc(100%+15px)] before:h-[calc(100%+15px)] before:rounded-full before:transition before:duration-[400ms] hover:bg-edpurple hover:text-white hover:before:border-edpurple"><i
-                                    class="fa-solid fa-play"></i></a>
+                                    class="fa-solid fa-play"></i></a> --}}
                         </div>
 
                         <!-- vectors -->
@@ -566,13 +566,11 @@
                                 src="{{ asset('web/img/gallery-img-1.jpg') }}" alt="Gallery image"></a>
                     </div>
                     <div class="swiper-slide max-w-max">
-                        <div class="relative rounded-[40px] overflow-hidden">
-                            <img src="{{ asset('web/img/gallery-img-2.jpg') }}" alt="Gallery image">
-                            <a href="https://youtu.be/5ppDzM8m9lI?si=zml3HbV176DBsZlg" data-fslightbox="gallery"
-                                class="flex items-center justify-center w-[60px] aspect-square bg-white rounded-full text-[#3746D2] absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] before:border before:absolute before:top-[50%] before:-translate-y-[50%] before:left-[50%] before:-translate-x-[50%] before:w-[calc(100%+15px)] before:h-[calc(100%+15px)] before:rounded-full before:transition before:duration-[400ms] hover:bg-edpurple hover:text-white hover:before:border-edpurple"><i
-                                    class="fa-solid fa-play"></i></a>
-                        </div>
+                        <a href="{{ asset('web/img/gallery-img-2.jpg') }}" data-fslightbox="gallery"
+                            class="block rounded-[40px] overflow-hidden"><img
+                                src="{{ asset('web/img/gallery-img-2.jpg') }}" alt="Gallery image"></a>
                     </div>
+
                     <div class="swiper-slide max-w-max">
                         <a href="{{ asset('web/img/gallery-img-3.jpg') }}" data-fslightbox="gallery"
                             class="block rounded-[40px] overflow-hidden"><img

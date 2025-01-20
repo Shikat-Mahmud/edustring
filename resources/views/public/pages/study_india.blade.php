@@ -34,9 +34,9 @@
                 <img src="{{ asset('web/img/study_in_india_banner.jpg') }}" alt="Course Cover"
                     class="rounded-[8px] w-full aspect-[1170/552]">
 
-                <a href="https://www.youtube.com/watch?v=ht7vYtWOazI&amp;pp=ygUPY291cnNlIG92ZXJ2aWV3" data-fslightbox
+                {{-- <a href="https://www.youtube.com/watch?v=ht7vYtWOazI&amp;pp=ygUPY291cnNlIG92ZXJ2aWV3" data-fslightbox
                     class="absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] w-[75px] xs:w-[65px] xxs:w-[60px] aspect-square bg-white rounded-full flex items-center justify-center text-[28px] text-edpurple hover:text-black before:absolute before:animate-borderFade before:-inset-[12px] before:border before:border-white before:rounded-full after:absolute after:animate-borderFade after:-inset-[5px] after:border after:border-white after:rounded-full"><i
-                        class="fa-solid fa-play"></i></a>
+                        class="fa-solid fa-play"></i></a> --}}
             </div>
 
             <!-- txt -->
