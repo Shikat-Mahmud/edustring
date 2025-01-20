@@ -3,6 +3,9 @@
 
 @section('content')
     <!-- BANNER SECTION START -->
+    @php
+        $settings = generalSettings();
+    @endphp
     <section class="ed-2-banner bg-edoffwhite pt-[120px] pb-[190px] relative z-[1] overflow-hidden">
         <div class="container max-w-[71.6%] xxxl:max-w-[86.5%] xxl:max-w-[90.6%] mx-auto">
             <div class="flex md:flex-col gap-x-[112px] gap-y-[40px] items-center">
@@ -24,7 +27,8 @@
                         As Per Your Best Fit with world top universities and collages.</p>
                     <div class="flex flex-wrap gap-[10px]">
                         <a href="{{ route('apply') }}"
-                            class="ed-btn !bg-transparent border border-edpurple !text-edpurple hover:!bg-edpurple hover:!text-white">Apply Online</a>
+                            class="ed-btn !bg-transparent border border-edpurple !text-edpurple hover:!bg-edpurple hover:!text-white">Apply
+                            Online</a>
                         <a href="{{ route('about') }}"
                             class="ed-btn !bg-transparent border border-black !text-black hover:!bg-black hover:!text-white">Discover</a>
                     </div>
@@ -76,15 +80,23 @@
                     <!-- icon -->
                     <div
                         class="bg-[#F8B81F] shrink-0 w-[84px] sm:w-[64px] aspect-square rounded-full p-[14px] duration-[400ms] flex items-center justify-center group-hover:bg-white">
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M16 0C10.4772 0 6 4.47715 6 10C6 13.866 8.20914 17.2835 11.5 18.7417V23C11.5 23.8284 12.1716 24.5 13 24.5H19C19.8284 24.5 20.5 23.8284 20.5 23V18.7417C23.7909 17.2835 26 13.866 26 10C26 4.47715 21.5228 0 16 0ZM18 28H14V30H18V28ZM20 26H12V28H20V26Z" class="fill-white group-hover:fill-[#F8B81F]" />
-                            <path d="M16 4C12.6863 4 10 6.68629 10 10C10 11.6569 10.6321 13.1566 11.7574 14.2426L10.3431 15.6569C9.95355 16.0464 9.95355 16.6795 10.3431 17.069L11.7574 18.4833C12.8434 19.6086 14.3431 20.2407 16 20.2407C19.3137 20.2407 22 17.5544 22 14.2407C22 10.927 19.3137 8.24074 16 8.24074C14.3431 8.24074 12.8434 8.87285 11.7574 9.99815L10.3431 8.58382C9.95355 8.1943 9.95355 7.56117 10.3431 7.17165L11.7574 5.75732C12.8434 4.63202 14.3431 4 16 4Z" class="fill-white group-hover:fill-[#F8B81F]" />
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M16 0C10.4772 0 6 4.47715 6 10C6 13.866 8.20914 17.2835 11.5 18.7417V23C11.5 23.8284 12.1716 24.5 13 24.5H19C19.8284 24.5 20.5 23.8284 20.5 23V18.7417C23.7909 17.2835 26 13.866 26 10C26 4.47715 21.5228 0 16 0ZM18 28H14V30H18V28ZM20 26H12V28H20V26Z"
+                                class="fill-white group-hover:fill-[#F8B81F]" />
+                            <path
+                                d="M16 4C12.6863 4 10 6.68629 10 10C10 11.6569 10.6321 13.1566 11.7574 14.2426L10.3431 15.6569C9.95355 16.0464 9.95355 16.6795 10.3431 17.069L11.7574 18.4833C12.8434 19.6086 14.3431 20.2407 16 20.2407C19.3137 20.2407 22 17.5544 22 14.2407C22 10.927 19.3137 8.24074 16 8.24074C14.3431 8.24074 12.8434 8.87285 11.7574 9.99815L10.3431 8.58382C9.95355 8.1943 9.95355 7.56117 10.3431 7.17165L11.7574 5.75732C12.8434 4.63202 14.3431 4 16 4Z"
+                                class="fill-white group-hover:fill-[#F8B81F]" />
                         </svg>
                     </div>
                     <!-- text -->
                     <div>
-                        <h5 class="font-semibold text-[20px] text-edblue duration-[400ms] group-hover:text-white">One Stop Study Solution</h5>
-                        <h6 class="text-[#808080] duration-[400ms] group-hover:text-white mt-[10px]">Your comprehensive guide to academic success, offering personalized study solutions for every educational need.</h6>
+                        <h5 class="font-semibold text-[20px] text-edblue duration-[400ms] group-hover:text-white">One Stop
+                            Study Solution</h5>
+                        <h6 class="text-[#808080] duration-[400ms] group-hover:text-white mt-[10px]">Your comprehensive
+                            guide to academic success, offering personalized study solutions for every educational need.
+                        </h6>
                     </div>
                 </div>
 
@@ -118,8 +130,10 @@
                     </div>
                     <!-- text -->
                     <div>
-                        <h5 class="font-semibold text-[20px] text-edblue duration-[400ms] group-hover:text-white">One To One Discussion</h5>
-                        <h6 class="text-[#808080] duration-[400ms] group-hover:text-white mt-[10px]">Engage in personalized, one-on-one discussions for tailored guidance and expert advice on your educational journey.</h6>
+                        <h5 class="font-semibold text-[20px] text-edblue duration-[400ms] group-hover:text-white">One To One
+                            Discussion</h5>
+                        <h6 class="text-[#808080] duration-[400ms] group-hover:text-white mt-[10px]">Engage in personalized,
+                            one-on-one discussions for tailored guidance and expert advice on your educational journey.</h6>
                     </div>
                 </div>
 
@@ -143,8 +157,10 @@
                     </div>
                     <!-- text -->
                     <div>
-                        <h5 class="font-semibold text-[20px] text-edblue duration-[400ms] group-hover:text-white">End To End Support</h5>
-                        <h6 class="text-[#808080] duration-[400ms] group-hover:text-white mt-[10px]">Providing seamless, end-to-end support from initial consultation to successful educational achievement.</h6>
+                        <h5 class="font-semibold text-[20px] text-edblue duration-[400ms] group-hover:text-white">End To End
+                            Support</h5>
+                        <h6 class="text-[#808080] duration-[400ms] group-hover:text-white mt-[10px]">Providing seamless,
+                            end-to-end support from initial consultation to successful educational achievement.</h6>
                     </div>
                 </div>
             </div>
@@ -190,7 +206,9 @@
                     <h6 class="ed-section-sub-title">About us</h6>
                     <h2 class="ed-section-title mb-[6px]">Learn New <span class="inline-block font-bold">Skills</span>
                         To Go Ahead For Your Career</h2>
-                    <p class="text-edgray mb-[34px]">Edustring is a dynamic education consultancy dedicated to guiding students toward achieving their academic and career aspirations. We provide personalized support, expert advice, and tailored solutions to unlock every learner's potential.</p>
+                    <p class="text-edgray mb-[34px]">Edustring is a dynamic education consultancy dedicated to guiding
+                        students toward achieving their academic and career aspirations. We provide personalized support,
+                        expert advice, and tailored solutions to unlock every learner's potential.</p>
                     <ul
                         class="ed-about-list font-medium text-[18px] text-edblue grid grid-cols-2 xxs:grid-cols-1 gap-[20px] xxs:gap-[15px] mb-[52px] *:pl-[40px] *:relative">
                         <li> <img src="{{ asset('web/img/icon/checkmark.svg') }}" style="width: 30px;"
@@ -241,7 +259,8 @@
                         </span>
                         <h4 class="font-semibold text-[18px] mb-[5px] text-edblue"><a href="#"
                                 class="hover:text-edpurple">Request Info</a></h4>
-                        <p class="text-edgray2 group-hover:text-black mb-[18px]">Reach out for detailed program information.</p>
+                        <p class="text-edgray2 group-hover:text-black mb-[18px]">Reach out for detailed program
+                            information.</p>
                         <a href="#"
                             class="ed-btn !h-[40px] !bg-white border !border-edpurple !text-edpurple !text-[14px] !font-semibold hover:!bg-edpurple hover:!text-white">Read
                             More</a>
@@ -255,7 +274,8 @@
                         </span>
                         <h4 class="font-semibold text-[18px] mb-[5px] text-edblue"><a href="#"
                                 class="hover:text-edpurple">Apply Online</a></h4>
-                        <p class="text-edgray2 group-hover:text-black mb-[18px]">Complete the application form digitally.</p>
+                        <p class="text-edgray2 group-hover:text-black mb-[18px]">Complete the application form digitally.
+                        </p>
                         <a href="#"
                             class="ed-btn !h-[40px] !bg-white border !border-edpurple !text-edpurple !text-[14px] !font-semibold hover:!bg-edpurple hover:!text-white">Read
                             More</a>
@@ -269,7 +289,8 @@
                         </span>
                         <h4 class="font-semibold text-[18px] mb-[5px] text-edblue"><a href="#"
                                 class="hover:text-edpurple">Submit Form</a></h4>
-                        <p class="text-edgray2 group-hover:text-black mb-[18px]">Finalize and send your application form.</p>
+                        <p class="text-edgray2 group-hover:text-black mb-[18px]">Finalize and send your application form.
+                        </p>
                         <a href="#"
                             class="ed-btn !h-[40px] !bg-white border !border-edpurple !text-edpurple !text-[14px] !font-semibold hover:!bg-edpurple hover:!text-white">Read
                             More</a>
@@ -288,7 +309,8 @@
                 <div>
                     <h6 class="ed-section-sub-title">Top Destinations</h6>
                     <h2 class="ed-section-title mb-[19px]">Explore Top Global Study Destinations</h2>
-                    <p class="mb-[31px]">We collaborate with top-quality partners across a wide range of destinations worldwide.  
+                    <p class="mb-[31px]">We collaborate with top-quality partners across a wide range of destinations
+                        worldwide.
                         This ensures students have access to the best educational opportunities globally.</p>
 
                     <div class="flex flex-wrap gap-x-[24px] gap-y-[15px]">
@@ -302,8 +324,13 @@
                             <span class="txt font-semibold text-etBlack">
                                 <span class="block text-[16px] font-medium text-edgray mb-[2px] opacity-80">Call Us
                                     Now</span>
-                                <a href="tel:+880 1609-794780"
-                                    class="font-semibold text-[18px] hover:text-edyellow">+880 1609-794780</a>
+                                @if ($settings->business_number)
+                                    <a href="tel:{{$settings->business_number}}"
+                                        class="font-semibold text-[18px] hover:text-edyellow">{{$settings->business_number}}</a>
+                                @else
+                                    <a href="tel:+880 1609-794780"
+                                        class="font-semibold text-[18px] hover:text-edyellow">+880 1609-794780</a>
+                                @endif
                             </span>
                         </div>
                     </div>
@@ -316,7 +343,8 @@
                         <!-- icon -->
                         <span
                             class="shrink-0 w-[120px] aspect-square rounded-[8px] bg-[#F39F5F]/20 flex items-center justify-center">
-                            <img src="{{ asset('web/img/uk-flag.svg') }}" alt="UK flag" class="p-[15px] rounded-[20px]">
+                            <img src="{{ asset('web/img/uk-flag.svg') }}" alt="UK flag"
+                                class="p-[15px] rounded-[20px]">
                         </span>
 
                         <div>
@@ -331,7 +359,8 @@
                         <!-- icon -->
                         <span
                             class="shrink-0 w-[120px] aspect-square rounded-[8px] bg-[#F39F5F]/20 flex items-center justify-center">
-                            <img src="{{ asset('web/img/india-flag.svg') }}" alt="India flag" class="p-[15px] rounded-[20px]">
+                            <img src="{{ asset('web/img/india-flag.svg') }}" alt="India flag"
+                                class="p-[15px] rounded-[20px]">
                         </span>
 
                         <div>
@@ -346,7 +375,8 @@
                         <!-- icon -->
                         <span
                             class="shrink-0 w-[120px] aspect-square rounded-[8px] bg-[#F39F5F]/20 flex items-center justify-center">
-                            <img src="{{ asset('web/img/china-flag.svg') }}" alt="China flag" class="p-[15px] rounded-[20px]">
+                            <img src="{{ asset('web/img/china-flag.svg') }}" alt="China flag"
+                                class="p-[15px] rounded-[20px]">
                         </span>
 
                         <div>
@@ -376,7 +406,8 @@
                 <div class="grow md:pt-[60px]">
                     <h6 class="ed-section-sub-title ed-section-sub-title--white">ARE YOU READY FOR THIS OFFER</h6>
                     <h2 class="ed-section-title !text-white mb-[36px]">20% Offer For Very First 10 <span
-                            class="font-normal text-[40px] xxl:text-[35px] xl:text-[30px] xs:text-[28px] xxs:text-[25px]">Student’s</span></h2>
+                            class="font-normal text-[40px] xxl:text-[35px] xl:text-[30px] xs:text-[28px] xxs:text-[25px]">Student’s</span>
+                    </h2>
                     <div class="flex flex-wrap gap-[16px]">
                         <a href="{{ route('apply') }}"
                             class="ed-btn !bg-edyellow !text-black hover:!bg-edblue hover:!text-white">Become a student</a>
@@ -438,8 +469,10 @@
 
                                         <div class="flex items-center justify-between grow xxs:w-full">
                                             <div class="left">
-                                                <h5 class="text-edblue font-semibold text-[20px] mb-[1px]">Sarah Thompson</h5>
-                                                <h6 class="text-[16px] text-edpurple font-normal">University of Manchester, UK</h6>
+                                                <h5 class="text-edblue font-semibold text-[20px] mb-[1px]">Sarah Thompson
+                                                </h5>
+                                                <h6 class="text-[16px] text-edpurple font-normal">University of Manchester,
+                                                    UK</h6>
                                             </div>
 
                                             <div class="right">
@@ -449,7 +482,9 @@
                                         </div>
                                     </div>
 
-                                    <p class="text-[#445375] font-normal mb-[21px]">EduString made the entire admission process seamless and stress-free. Their guidance was invaluable in selecting the right program. I’m truly grateful for their support!</p>
+                                    <p class="text-[#445375] font-normal mb-[21px]">EduString made the entire admission
+                                        process seamless and stress-free. Their guidance was invaluable in selecting the
+                                        right program. I’m truly grateful for their support!</p>
 
                                     <!-- rating stars -->
                                     <div
@@ -475,8 +510,10 @@
 
                                         <div class="flex items-center justify-between grow xxs:w-full">
                                             <div class="left">
-                                                <h5 class="text-edblue font-semibold text-[20px] mb-[1px]">Ankit Sharma</h5>
-                                                <h6 class="text-[16px] text-edpurple font-normal">Delhi University, India</h6>
+                                                <h5 class="text-edblue font-semibold text-[20px] mb-[1px]">Ankit Sharma
+                                                </h5>
+                                                <h6 class="text-[16px] text-edpurple font-normal">Delhi University, India
+                                                </h6>
                                             </div>
 
                                             <div class="right">
@@ -486,7 +523,9 @@
                                         </div>
                                     </div>
 
-                                    <p class="text-[#445375] font-normal mb-[21px]">Thanks to EduString, I found the perfect course that matched my interests. Their team was always approachable and ready to help. Highly recommend their services!</p>
+                                    <p class="text-[#445375] font-normal mb-[21px]">Thanks to EduString, I found the
+                                        perfect course that matched my interests. Their team was always approachable and
+                                        ready to help. Highly recommend their services!</p>
 
                                     <!-- rating stars -->
                                     <div
@@ -513,7 +552,8 @@
                                         <div class="flex items-center justify-between grow xxs:w-full">
                                             <div class="left">
                                                 <h5 class="text-edblue font-semibold text-[20px] mb-[1px]">Li Wei</h5>
-                                                <h6 class="text-[16px] text-edpurple font-normal">Tsinghua University, China</h6>
+                                                <h6 class="text-[16px] text-edpurple font-normal">Tsinghua University,
+                                                    China</h6>
                                             </div>
 
                                             <div class="right">
@@ -523,7 +563,9 @@
                                         </div>
                                     </div>
 
-                                    <p class="text-[#445375] font-normal mb-[21px]">EduString provided excellent assistance with my application. They ensured everything was accurate and on time. I couldn’t have done it without their expertise!</p>
+                                    <p class="text-[#445375] font-normal mb-[21px]">EduString provided excellent assistance
+                                        with my application. They ensured everything was accurate and on time. I couldn’t
+                                        have done it without their expertise!</p>
 
                                     <!-- rating stars -->
                                     <div
@@ -548,7 +590,7 @@
     </section>
     <!-- TESTIMONIAL SECTION END -->
 
-    
+
     <!-- GALLERY SECTION START -->
     <div class="overflow-hidden">
         <div class="mx-[19.71%] xxxl:mx-[14.71%] xxl:mx-[9.71%] xl:mx-[5.71%] md:mx-[12px]">
@@ -776,7 +818,8 @@
                         </div>
 
                         <h4 class="et-blog__title text-[20px] sm:text-[18px] font-semibold leading-[1.6] mb-[20px]"><a
-                                href="{{ route('blog.details') }}" class="hover:text-edpurple">Which Yoga Hybrid Is Right For
+                                href="{{ route('blog.details') }}" class="hover:text-edpurple">Which Yoga Hybrid Is Right
+                                For
                                 You?</a></h4>
 
                         <a href="{{ route('blog.details') }}"
@@ -819,7 +862,8 @@
                         </div>
 
                         <h4 class="et-blog__title text-[20px] sm:text-[18px] font-semibold leading-[1.6] mb-[20px]"><a
-                                href="{{ route('blog.details') }}" class="hover:text-edpurple">Which Yoga Hybrid Is Right For
+                                href="{{ route('blog.details') }}" class="hover:text-edpurple">Which Yoga Hybrid Is Right
+                                For
                                 You?</a></h4>
 
                         <a href="{{ route('blog.details') }}"
@@ -862,7 +906,8 @@
                         </div>
 
                         <h4 class="et-blog__title text-[20px] sm:text-[18px] font-semibold leading-[1.6] mb-[20px]"><a
-                                href="{{ route('blog.details') }}" class="hover:text-edpurple">Which Yoga Hybrid Is Right For
+                                href="{{ route('blog.details') }}" class="hover:text-edpurple">Which Yoga Hybrid Is Right
+                                For
                                 You?</a></h4>
 
                         <a href="{{ route('blog.details') }}"
@@ -948,12 +993,15 @@
                         <div
                             class="ed-single-accordion-item bg-white rounded-[6px] py-[24px] xs:py-[15px] px-[30px] xs:px-[20px] shadow-[0_4px_25px_rgba(0,0,0,0.06)] open">
                             <div class="ed-single-accordion-item__header flex items-center justify-between cursor-pointer">
-                                <h3 class="ed-single-accordion-item__title font-semibold text-[20px] text-etBlack">How can EduString help me with my study abroad plans?</h3>
+                                <h3 class="ed-single-accordion-item__title font-semibold text-[20px] text-etBlack">How can
+                                    EduString help me with my study abroad plans?</h3>
                                 <span class="text-[15px]"><i class="fa-solid fa-angles-right"></i></span>
                             </div>
 
                             <div class="ed-single-accordion-item__body">
-                                <p class="font-light text-[16px] text-etGray">We provide personalized guidance, from selecting universities and programs to completing applications and preparing for visas.</p>
+                                <p class="font-light text-[16px] text-etGray">We provide personalized guidance, from
+                                    selecting universities and programs to completing applications and preparing for visas.
+                                </p>
                             </div>
                         </div>
 
@@ -961,12 +1009,14 @@
                         <div
                             class="ed-single-accordion-item bg-white rounded-[6px] py-[24px] xs:py-[15px] px-[30px] xs:px-[20px] shadow-[0_4px_25px_rgba(0,0,0,0.06)]">
                             <div class="ed-single-accordion-item__header flex items-center justify-between cursor-pointer">
-                                <h3 class="ed-single-accordion-item__title font-semibold text-[20px] text-etBlack">What are the costs involved in studying abroad?</h3>
+                                <h3 class="ed-single-accordion-item__title font-semibold text-[20px] text-etBlack">What are
+                                    the costs involved in studying abroad?</h3>
                                 <span class="text-[15px]"><i class="fa-solid fa-angles-right"></i></span>
                             </div>
 
                             <div class="ed-single-accordion-item__body">
-                                <p class="font-light text-[16px] text-etGray">Costs vary by country and program; we help you estimate tuition, living expenses, and funding opportunities.</p>
+                                <p class="font-light text-[16px] text-etGray">Costs vary by country and program; we help
+                                    you estimate tuition, living expenses, and funding opportunities.</p>
                             </div>
                         </div>
 
@@ -974,12 +1024,14 @@
                         <div
                             class="ed-single-accordion-item bg-white rounded-[6px] py-[24px] xs:py-[15px] px-[30px] xs:px-[20px] shadow-[0_4px_25px_rgba(0,0,0,0.06)]">
                             <div class="ed-single-accordion-item__header flex items-center justify-between cursor-pointer">
-                                <h3 class="ed-single-accordion-item__title font-semibold text-[20px] text-etBlack">Do you assist with scholarships and financial aid?</h3>
+                                <h3 class="ed-single-accordion-item__title font-semibold text-[20px] text-etBlack">Do you
+                                    assist with scholarships and financial aid?</h3>
                                 <span class="text-[15px]"><i class="fa-solid fa-angles-right"></i></span>
                             </div>
 
                             <div class="ed-single-accordion-item__body">
-                                <p class="font-light text-[16px] text-etGray">Yes, we guide you through scholarship options and application processes to make education abroad more affordable.</p>
+                                <p class="font-light text-[16px] text-etGray">Yes, we guide you through scholarship options
+                                    and application processes to make education abroad more affordable.</p>
                             </div>
                         </div>
                     </div>

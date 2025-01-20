@@ -150,16 +150,17 @@
                     <p class="text-edgray font-normal text-[16px] mb-[38px]">We have professional alliance's with leading
                         Universities and Colleges around the world.</p>
 
-                    <form action="#" class="grid grid-cols-2 xxs:grid-cols-1 gap-[30px] xs:gap-[20px] text-[16px]">
+                    <form action="{{ route('contacts.store') }}" enctype="multipart/form-data" method="POST" class="grid grid-cols-2 xxs:grid-cols-1 gap-[30px] xs:gap-[20px] text-[16px]">
+                        @csrf
                         <div class="col-span-2 xxs:col-span-1">
                             <label for="ed-contact-name" class="font-lato font-semibold text-edblue block mb-[12px]">Your
                                 Name*</label>
                             <input type="text" name="name" id="ed-contact-name" placeholder="Your Name"
-                                class="border border-[#ECECEC] h-[55px] px-[20px] xs:px-[15px] rounded-[4px] w-full focus:outline-none">
+                                class="border border-[#ECECEC] h-[55px] px-[20px] xs:px-[15px] rounded-[4px] w-full focus:outline-none" required>
                         </div>
                         <div>
                             <label for="ed-contact-email" class="font-lato font-semibold text-edblue block mb-[12px]">Your
-                                Email*</label>
+                                Email</label>
                             <input type="email" name="email" id="ed-contact-email" placeholder="Your Email"
                                 class="border border-[#ECECEC] h-[55px] px-[20px] xs:px-[15px] rounded-[4px] w-full focus:outline-none">
                         </div>
@@ -167,11 +168,11 @@
                             <label for="ed-contact-phone" class="font-lato font-semibold text-edblue block mb-[12px]">Your
                                 Phone No*</label>
                             <input type="phone" name="phone" id="ed-contact-phone" placeholder="Your Phone No"
-                                class="border border-[#ECECEC] h-[55px] px-[20px] xs:px-[15px] rounded-[4px] w-full focus:outline-none">
+                                class="border border-[#ECECEC] h-[55px] px-[20px] xs:px-[15px] rounded-[4px] w-full focus:outline-none" required>
                         </div>
                         <div class="col-span-2 xxs:col-span-1">
                             <label for="ed-contact-message" class="font-lato font-semibold text-edblue block mb-[12px]">Your
-                                Message*</label>
+                                Message</label>
                             <textarea name="message" id="ed-contact-message" placeholder="Your Message"
                                 class="border border-[#ECECEC] h-[145px] p-[20px] rounded-[4px] w-full focus:outline-none"></textarea>
                         </div>

@@ -84,17 +84,18 @@
                         <div class="mt-[50px]">
                             <h5 class="font-semibold text-[22px] text-edblue mb-[17px]">Contact Us for Admission</h5>
                             <hr class="mb-[20px]">
-                            <form action="#"
+                            <form action="{{ route('contacts.store') }}" enctype="multipart/form-data" method="POST"
                                 class="grid grid-cols-2 xxs:grid-cols-1 gap-[30px] xs:gap-[20px] text-[16px]">
+                                @csrf
                                 <div class="col-span-2 xxs:col-span-1">
                                     <label for="ed-course-review-name"
                                         class="font-lato font-semibold text-edblue block mb-[12px]">Your Name*</label>
                                     <input type="text" name="name" id="ed-course-review-name" placeholder="Your Name"
-                                        class="border border-[#ECECEC] h-[55px] px-[20px] xs:px-[15px] rounded-[4px] w-full focus:outline-none">
+                                        class="border border-[#ECECEC] h-[55px] px-[20px] xs:px-[15px] rounded-[4px] w-full focus:outline-none" required>
                                 </div>
                                 <div>
                                     <label for="ed-course-review-email"
-                                        class="font-lato font-semibold text-edblue block mb-[12px]">Your Email*</label>
+                                        class="font-lato font-semibold text-edblue block mb-[12px]">Your Email</label>
                                     <input type="email" name="email" id="ed-course-review-email"
                                         placeholder="Your Email"
                                         class="border border-[#ECECEC] h-[55px] px-[20px] xs:px-[15px] rounded-[4px] w-full focus:outline-none">
@@ -104,7 +105,7 @@
                                         class="font-lato font-semibold text-edblue block mb-[12px]">Your Phone No*</label>
                                     <input type="phone" name="phone" id="ed-course-review-phone"
                                         placeholder="Your Phone No"
-                                        class="border border-[#ECECEC] h-[55px] px-[20px] xs:px-[15px] rounded-[4px] w-full focus:outline-none">
+                                        class="border border-[#ECECEC] h-[55px] px-[20px] xs:px-[15px] rounded-[4px] w-full focus:outline-none" required>
                                 </div>
                                 <div class="col-span-2 xxs:col-span-1">
                                     <label for="ed-course-review-message"

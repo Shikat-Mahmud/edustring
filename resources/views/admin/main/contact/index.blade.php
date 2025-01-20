@@ -30,17 +30,17 @@
                                                 <td>{{ $item->name }}</td>
                                                 <td>{{ $item->email }}</td>
                                                 <td>{{ $item->phone }}</td>
-                                                <td>{{ $item->message }}</td>
+                                                <td>
+                                                    @php
+                                                        $words = explode(' ', $item->message);
+                                                        $shortenedMessage = count($words) > 15 ? implode(' ', array_slice($words, 0, 15)) . '...' : $item->message;
+                                                    @endphp
+                                                    {{ $shortenedMessage }}
+                                                </td>                                                
                                                 <td>
                                                     <div class="d-flex">
-                                                        <a class="btn btn-secondary btn-sm me-2"
-                                                            href="{{ route('categories.show', $item->id) }}"><i class="ph ph-eye"></i></a>
-
-                                                        <a class="btn btn-info btn-sm me-2"
-                                                            href="{{ route('categories.edit', $item->id) }}"><i class="ph ph-pencil"></i></a>
-
                                                         <form class="deleteForm"
-                                                            action="{{ route('subcribers.destroy', $item->id) }}"
+                                                            action="{{ route('contacts.destroy', $item->id) }}"
                                                             method="post">
                                                             @csrf
                                                             @method('DELETE')
