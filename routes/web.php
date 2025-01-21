@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\ApplicationController;
+use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\Admin\InvestController;
@@ -74,6 +75,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('/reviews', ReviewController::class);
     Route::resource('/mentors', MentorController::class);
     Route::resource('/partners', PartnerController::class);
+    Route::resource('/blogs', BlogController::class);
 
     // all settings route
     Route::get('/general-setting', [SettingsController::class, 'index'])->name('general.setting');
