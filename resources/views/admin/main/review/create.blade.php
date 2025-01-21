@@ -45,8 +45,8 @@
                                     <label for="review" class="col-md-4" required>Review: <span
                                             class="text-danger">*</span></label>
                                     <div class="col-md-8">
-                                        <input type="text" name="review" id="review" class="form-control"
-                                            placeholder="Review" required />
+                                            <textarea name="Review" id="Review" class="form-control"
+                                            placeholder="Review" rows="6" required></textarea>
                                     </div>
                                 </div>
                                 <div class="row mt-3">

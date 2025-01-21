@@ -94,7 +94,8 @@
                                 </span>
                             </blockquote>
 
-                            <p class="font-normal text-[16px] text-edgray mb-[16px]">{{ $blog->content }}</p>
+                            <div id="blogContent" class="font-normal text-[16px] text-edgray mb-[16px]">{!! $blog->content !!}</div>
+
                         </div>
                     </div>
                 </div>

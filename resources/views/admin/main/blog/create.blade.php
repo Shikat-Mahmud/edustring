@@ -69,8 +69,7 @@
                                     <label for="content" class="col-md-4">Content: <span
                                             class="text-danger">*</span></label>
                                     <div class="col-md-8">
-                                        <textarea name="content" id="content" class="form-control"
-                                            placeholder="Content" rows="6" required></textarea>
+                                        <textarea name="content" id="content" class="form-control" placeholder="Content" rows="6" required></textarea>
                                     </div>
                                 </div>
                                 <div class="row mt-3">

@@ -47,8 +47,7 @@
                                     <label for="review" class="col-md-4" required>Review: <span
                                             class="text-danger">*</span></label>
                                     <div class="col-md-8">
-                                        <input type="text" name="review" id="review" class="form-control"
-                                            value="{{ $review->review }}" placeholder="Review" required />
+                                            <textarea name="content" id="content" class="form-control" rows="6" placeholder="Blog Content" required>{{ $review->review }}</textarea>
                                     </div>
                                 </div>
                                 <div class="row mt-3">
