@@ -61,7 +61,7 @@
                                 <div class="row mt-3">
                                     <label for="tag" class="col-md-4">Tags</label>
                                     <div class="col-md-8">
-                                        <input type="text" name="tag" id="tag" class="form-control"
+                                        <input type="text" name="tag" id="tag" class="form-control" data-role="tagsinput"
                                             value="{{ $blog->tag }}" placeholder="Comma-separated tags" />
                                     </div>
                                 </div>

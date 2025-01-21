@@ -31,7 +31,7 @@ class BlogController extends Controller
                 'category' => 'required|string|max:255',
                 'author' => 'required|string|max:255',
                 'date' => 'required|date',
-                'tag' => 'required|string|max:255',
+                'tag' => 'required|string',
             ]);
 
             if ($request->hasFile('image')) {
@@ -69,7 +69,7 @@ class BlogController extends Controller
                 'category' => 'required|string|max:255',
                 'author' => 'required|string|max:255',
                 'date' => 'required|date',
-                'tag' => 'required|string|max:255',
+                'tag' => 'required|string',
                 'status' => 'required',
             ]);
 
