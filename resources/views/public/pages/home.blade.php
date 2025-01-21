@@ -527,11 +527,11 @@
             <!-- gallery slider -->
             <div class="ed-gallery-slider swiper overflow-visible">
                 <div class="swiper-wrapper">
-                    @foreach ($images as $image)
+                    @foreach ($galleries as $gallery)
                         <div class="swiper-slide max-w-max">
-                            <a href="{{ asset('storage/' . $image->photo) }}" data-fslightbox="gallery"
+                            <a href="{{ asset('storage/' . $gallery->photo) }}" data-fslightbox="gallery"
                                 class="block rounded-[40px] overflow-hidden"><img
-                                    src="{{ asset('storage/' . $image->photo) }}" alt="Gallery image"
+                                    src="{{ asset('storage/' . $gallery->photo) }}" alt="Gallery image"
                                     class="object-cover" style="height: 300px; width: 500px;"></a>
                         </div>
                     @endforeach
@@ -595,7 +595,8 @@
                                     </svg>
                                 </div>
                             </div>
-                            <h5 class="font-semibold text-[20px] text-etBlack mb-[4px]"><a href="teacher-details.html"
+                            <h5 class="font-semibold text-[20px] text-etBlack mb-[4px]"><a
+                                    href="{{ $mentor->profile_link ?? '#' }}"
                                     class="hover:text-etBlue">{{ $mentor->name }}</a></h5>
                             <span class="text-etGray text-[16px]">{{ $mentor->position }}</span>
                         </div>
@@ -809,29 +810,11 @@
             <div class="ed-partners-slider swiper mt-[100px] xl:mt-[70px] md:mt-[50px]">
                 <div class="swiper-wrapper">
                     <!-- single partner -->
-                    <div class="swiper-slide"><img src="{{ asset('web/img/partner-1.png') }}" alt="Partner Logo"
-                            class="xxs:mx-auto"></div>
-                    <!-- single partner -->
-                    <div class="swiper-slide"><img src="{{ asset('web/img/partner-2.png') }}" alt="Partner Logo"
-                            class="xxs:mx-auto"></div>
-                    <!-- single partner -->
-                    <div class="swiper-slide"><img src="{{ asset('web/img/partner-3.png') }}" alt="Partner Logo"
-                            class="xxs:mx-auto"></div>
-                    <!-- single partner -->
-                    <div class="swiper-slide"><img src="{{ asset('web/img/partner-4.png') }}" alt="Partner Logo"
-                            class="xxs:mx-auto"></div>
-                    <!-- single partner -->
-                    <div class="swiper-slide"><img src="{{ asset('web/img/partner-5.png') }}" alt="Partner Logo"
-                            class="xxs:mx-auto"></div>
-                    <!-- single partner -->
-                    <div class="swiper-slide"><img src="{{ asset('web/img/partner-6.png') }}" alt="Partner Logo"
-                            class="xxs:mx-auto"></div>
-                    <!-- single partner -->
-                    <div class="swiper-slide"><img src="{{ asset('web/img/partner-1.png') }}" alt="Partner Logo"
-                            class="xxs:mx-auto"></div>
-                    <!-- single partner -->
-                    <div class="swiper-slide"><img src="{{ asset('web/img/partner-2.png') }}" alt="Partner Logo"
-                            class="xxs:mx-auto"></div>
+                    @foreach ($partners as $partner)
+                        <div class="swiper-slide"><img
+                                src="{{ $partner->company_logo ? asset('storage/' . $partner->company_logo) : asset('web/img/partner-1.png') }}"
+                                alt="Partner Logo" class="xxs:mx-auto"></div>
+                    @endforeach
                 </div>
             </div>
 

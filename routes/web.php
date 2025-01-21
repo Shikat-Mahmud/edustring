@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\Admin\InvestController;
 use App\Http\Controllers\Admin\MentorController;
+use App\Http\Controllers\Admin\PartnerController;
 use App\Http\Controllers\Admin\ReviewController;
 use App\Http\Controllers\Admin\SubscriberController;
 use App\Http\Controllers\ProfileController;
@@ -72,6 +73,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('/invests', InvestController::class);
     Route::resource('/reviews', ReviewController::class);
     Route::resource('/mentors', MentorController::class);
+    Route::resource('/partners', PartnerController::class);
 
     // all settings route
     Route::get('/general-setting', [SettingsController::class, 'index'])->name('general.setting');

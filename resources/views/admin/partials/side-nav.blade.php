@@ -56,7 +56,16 @@
                         </span>
                         <span class="pc-mtext">Mentors</span>
                     </a>
-                </li>                
+                </li>
+
+                <li class="pc-item pc-hasmenu">
+                    <a href="{{ route('partners.index') }}" class="pc-link">
+                        <span class="pc-micon">
+                            <i class="ph ph-handshake"></i>
+                        </span>
+                        <span class="pc-mtext">Partners</span>
+                    </a>
+                </li>
 
                 <li class="pc-item pc-hasmenu">
                     <a href="{{ route('invests.index') }}" class="pc-link"><span class="pc-micon">
