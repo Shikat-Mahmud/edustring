@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Public;
 
 use App\Http\Controllers\Controller;
 use App\Models\Gallery;
+use App\Models\Mentor;
 use App\Models\Review;
 use Illuminate\Http\Request;
 
@@ -13,8 +14,9 @@ class HomeController extends Controller
     {
         $reviews = Review::latest()->get();
         $images = Gallery::latest()->get();
+        $mentors = Mentor::all();
         
-        return view("public.pages.home", compact('reviews', 'images'));
+        return view("public.pages.home", compact('reviews', 'images', 'mentors'));
     }
 
     public function about()

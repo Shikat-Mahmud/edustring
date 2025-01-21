@@ -75,7 +75,7 @@
                 <div class="space-y-[18px]">
                     <a href="{{ route('about') }}"
                         class="flex items-center gap-[10px] opacity-80 hover:text-edyellow"><span class="icon"><img
-                                src="{{ asset('web/img/double-arrow.svg') }}" alt="icon"></span> Edu String
+                                src="{{ asset('web/img/double-arrow.svg') }}" alt="icon"></span> Edustring
                         About</a>
                     <a href="{{ route('contact') }}"
                         class="flex items-center gap-[10px] opacity-80 hover:text-edyellow"><span class="icon"><img
