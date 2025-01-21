@@ -325,8 +325,8 @@
                                 <span class="block text-[16px] font-medium text-edgray mb-[2px] opacity-80">Call Us
                                     Now</span>
                                 @if ($settings->business_number)
-                                    <a href="tel:{{$settings->business_number}}"
-                                        class="font-semibold text-[18px] hover:text-edyellow">{{$settings->business_number}}</a>
+                                    <a href="tel:{{ $settings->business_number }}"
+                                        class="font-semibold text-[18px] hover:text-edyellow">{{ $settings->business_number }}</a>
                                 @else
                                     <a href="tel:+880 1609-794780"
                                         class="font-semibold text-[18px] hover:text-edyellow">+880 1609-794780</a>
@@ -457,127 +457,52 @@
                 <div>
                     <div class="ed-2-testimonial-slider swiper max-w-[1200px]">
                         <div class="swiper-wrapper">
-                            <!-- single testimony -->
-                            <div class="swiper-slide w-[570px] lg:w-[540px] xs:w-full">
-                                <div
-                                    class="et-testimony bg-white p-[30px] xxs:p-[20px] border border-[#d9d9d9] rounded-[20px]">
-                                    <!-- single testimony heading -->
+                            <!-- Loop through reviews -->
+                            @foreach ($reviews as $review)
+                                <!-- single testimony -->
+                                <div class="swiper-slide w-[570px] lg:w-[540px] xs:w-full">
                                     <div
-                                        class="et-testimony__heading flex xxs:flex-col items-center gap-[22px] mb-[42px] xxs:mb-[22px]">
-                                        <img src="{{ asset('web/img/user-2.png') }}" alt="reviewer image"
-                                            class="w-[70px] aspect-square rounded-full shrink-0">
+                                        class="et-testimony bg-white p-[30px] xxs:p-[20px] border border-[#d9d9d9] rounded-[20px]">
+                                        <!-- single testimony heading -->
+                                        <div
+                                            class="et-testimony__heading flex xxs:flex-col items-center gap-[22px] mb-[42px] xxs:mb-[22px]">
+                                            <img src="{{ $review->photo ? asset('storage/' . $review->photo) : asset('/assets/images/user/avatar-2.jpg') }}"
+                                                alt="reviewer image" class="w-[70px] aspect-square rounded-full shrink-0">
 
-                                        <div class="flex items-center justify-between grow xxs:w-full">
-                                            <div class="left">
-                                                <h5 class="text-edblue font-semibold text-[20px] mb-[1px]">Sarah Thompson
-                                                </h5>
-                                                <h6 class="text-[16px] text-edpurple font-normal">University of Manchester,
-                                                    UK</h6>
-                                            </div>
+                                            <div class="flex items-center justify-between grow xxs:w-full">
+                                                <div class="left">
+                                                    <h5 class="text-edblue font-semibold text-[20px] mb-[1px]">
+                                                        {{ $review->name }}
+                                                    </h5>
+                                                    <h6 class="text-[16px] text-edpurple font-normal">
+                                                        {{ $review->university }}
+                                                    </h6>
+                                                </div>
 
-                                            <div class="right">
-                                                <img src="{{ asset('web/img/icon/quotation.svg') }}"
-                                                    alt="quotation mark">
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <p class="text-[#445375] font-normal mb-[21px]">EduString made the entire admission
-                                        process seamless and stress-free. Their guidance was invaluable in selecting the
-                                        right program. I’m truly grateful for their support!</p>
-
-                                    <!-- rating stars -->
-                                    <div
-                                        class="inline-flex items-center gap-[6px] border border-edyellow rounded-full px-[10px] h-[40px]">
-                                        <img src="{{ asset('web/img/icon/star.svg') }}" alt="star">
-                                        <img src="{{ asset('web/img/icon/star.svg') }}" alt="star">
-                                        <img src="{{ asset('web/img/icon/star.svg') }}" alt="star">
-                                        <img src="{{ asset('web/img/icon/star.svg') }}" alt="star">
-                                        <img src="{{ asset('web/img/icon/star.svg') }}" alt="star">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- single testimony -->
-                            <div class="swiper-slide w-[570px] lg:w-[540px] xs:w-full">
-                                <div
-                                    class="et-testimony bg-white p-[30px] xxs:p-[20px] border border-[#d9d9d9] rounded-[20px]">
-                                    <!-- single testimony heading -->
-                                    <div
-                                        class="et-testimony__heading flex xxs:flex-col items-center gap-[22px] mb-[42px] xxs:mb-[22px]">
-                                        <img src="{{ asset('web/img/user-2.png') }}" alt="reviewer image"
-                                            class="w-[70px] aspect-square rounded-full shrink-0">
-
-                                        <div class="flex items-center justify-between grow xxs:w-full">
-                                            <div class="left">
-                                                <h5 class="text-edblue font-semibold text-[20px] mb-[1px]">Ankit Sharma
-                                                </h5>
-                                                <h6 class="text-[16px] text-edpurple font-normal">Delhi University, India
-                                                </h6>
-                                            </div>
-
-                                            <div class="right">
-                                                <img src="{{ asset('web/img/icon/quotation.svg') }}"
-                                                    alt="quotation mark">
+                                                <div class="right">
+                                                    <img src="{{ asset('web/img/icon/quotation.svg') }}"
+                                                        alt="quotation mark">
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
 
-                                    <p class="text-[#445375] font-normal mb-[21px]">Thanks to EduString, I found the
-                                        perfect course that matched my interests. Their team was always approachable and
-                                        ready to help. Highly recommend their services!</p>
+                                        <p class="text-[#445375] font-normal mb-[21px]">
+                                            {{ Str::limit($review->review, 120) }}
+                                        </p>
 
-                                    <!-- rating stars -->
-                                    <div
-                                        class="inline-flex items-center gap-[6px] border border-edyellow rounded-full px-[10px] h-[40px]">
-                                        <img src="{{ asset('web/img/icon/star.svg') }}" alt="star">
-                                        <img src="{{ asset('web/img/icon/star.svg') }}" alt="star">
-                                        <img src="{{ asset('web/img/icon/star.svg') }}" alt="star">
-                                        <img src="{{ asset('web/img/icon/star.svg') }}" alt="star">
-                                        <img src="{{ asset('web/img/icon/star.svg') }}" alt="star">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- single testimony -->
-                            <div class="swiper-slide w-[570px] lg:w-[540px] xs:w-full">
-                                <div
-                                    class="et-testimony bg-white p-[30px] xxs:p-[20px] border border-[#d9d9d9] rounded-[20px]">
-                                    <!-- single testimony heading -->
-                                    <div
-                                        class="et-testimony__heading flex xxs:flex-col items-center gap-[22px] mb-[42px] xxs:mb-[22px]">
-                                        <img src="{{ asset('web/img/user-2.png') }}" alt="reviewer image"
-                                            class="w-[70px] aspect-square rounded-full shrink-0">
-
-                                        <div class="flex items-center justify-between grow xxs:w-full">
-                                            <div class="left">
-                                                <h5 class="text-edblue font-semibold text-[20px] mb-[1px]">Li Wei</h5>
-                                                <h6 class="text-[16px] text-edpurple font-normal">Tsinghua University,
-                                                    China</h6>
-                                            </div>
-
-                                            <div class="right">
-                                                <img src="{{ asset('web/img/icon/quotation.svg') }}"
-                                                    alt="quotation mark">
-                                            </div>
+                                        <!-- rating stars -->
+                                        <div
+                                            class="inline-flex items-center gap-[6px] border border-edyellow rounded-full px-[10px] h-[40px]">
+                                            @for ($i = 0; $i < $review->rating; $i++)
+                                                <img src="{{ asset('web/img/icon/star.svg') }}" alt="star">
+                                            @endfor
+                                            @for ($i = $review->rating; $i < 5; $i++)
+                                                <img src="{{ asset('web/img/icon/star-empty.svg') }}" alt="empty star">
+                                            @endfor
                                         </div>
                                     </div>
-
-                                    <p class="text-[#445375] font-normal mb-[21px]">EduString provided excellent assistance
-                                        with my application. They ensured everything was accurate and on time. I couldn’t
-                                        have done it without their expertise!</p>
-
-                                    <!-- rating stars -->
-                                    <div
-                                        class="inline-flex items-center gap-[6px] border border-edyellow rounded-full px-[10px] h-[40px]">
-                                        <img src="{{ asset('web/img/icon/star.svg') }}" alt="star">
-                                        <img src="{{ asset('web/img/icon/star.svg') }}" alt="star">
-                                        <img src="{{ asset('web/img/icon/star.svg') }}" alt="star">
-                                        <img src="{{ asset('web/img/icon/star.svg') }}" alt="star">
-                                        <img src="{{ asset('web/img/icon/star.svg') }}" alt="star">
-                                    </div>
                                 </div>
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
@@ -602,22 +527,14 @@
             <!-- gallery slider -->
             <div class="ed-gallery-slider swiper overflow-visible">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide max-w-max">
-                        <a href="{{ asset('web/img/gallery-img-1.jpg') }}" data-fslightbox="gallery"
-                            class="block rounded-[40px] overflow-hidden"><img
-                                src="{{ asset('web/img/gallery-img-1.jpg') }}" alt="Gallery image"></a>
-                    </div>
-                    <div class="swiper-slide max-w-max">
-                        <a href="{{ asset('web/img/gallery-img-2.jpg') }}" data-fslightbox="gallery"
-                            class="block rounded-[40px] overflow-hidden"><img
-                                src="{{ asset('web/img/gallery-img-2.jpg') }}" alt="Gallery image"></a>
-                    </div>
-
-                    <div class="swiper-slide max-w-max">
-                        <a href="{{ asset('web/img/gallery-img-3.jpg') }}" data-fslightbox="gallery"
-                            class="block rounded-[40px] overflow-hidden"><img
-                                src="{{ asset('web/img/gallery-img-3.jpg') }}" alt="Gallery image"></a>
-                    </div>
+                    @foreach ($images as $image)
+                        <div class="swiper-slide max-w-max">
+                            <a href="{{ asset('storage/' . $image->photo) }}" data-fslightbox="gallery"
+                                class="block rounded-[40px] overflow-hidden"><img
+                                    src="{{ asset('storage/' . $image->photo) }}" alt="Gallery image"
+                                    class="object-cover" style="height: 300px; width: 500px;"></a>
+                        </div>
+                    @endforeach
                 </div>
             </div>
         </div>

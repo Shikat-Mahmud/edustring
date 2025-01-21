@@ -3,13 +3,18 @@
 namespace App\Http\Controllers\Public;
 
 use App\Http\Controllers\Controller;
+use App\Models\Gallery;
+use App\Models\Review;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     public function index()
     {
-        return view("public.pages.home");
+        $reviews = Review::latest()->get();
+        $images = Gallery::latest()->get();
+        
+        return view("public.pages.home", compact('reviews', 'images'));
     }
 
     public function about()
