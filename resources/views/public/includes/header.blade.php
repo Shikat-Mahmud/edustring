@@ -35,7 +35,7 @@
                             </ul>
                         </li>
                         <li><a href="{{ route('gallery') }}">Gallery</a></li>
-                        <li><a href="{{ route('blogs') }}">Blogs</a></li>
+                        <li><a href="{{ route('our.blogs') }}">Blogs</a></li>
                         <li><a href="{{ route('contact') }}">Contact us</a></li>
                     </ul>
                 </div>

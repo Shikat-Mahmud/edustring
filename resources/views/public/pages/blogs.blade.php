@@ -2,189 +2,134 @@
 @section('title', 'Blogs')
 
 @section('content')
-<!-- BREADCRUMB SECTION START -->
-<section style="padding-top: 327px; padding-bottom: 158px; text-align: center; background: url('{{ asset('web/img/breadcrumb-bg.jpg') }}') no-repeat center center / cover; position: relative; z-index: 1; overflow: hidden;"
-class="xl:pt-[287px] lg:pt-[237px] sm:pt-[200px] xxs:pt-[180px] xl:pb-[118px] lg:pb-[98px] sm:pb-[68px] xs:pb-[48px] before:absolute before:-z-[1] before:inset-0 before:bg-edblue/70 before:pointer-events-none">
-    <div class="mx-[19.71%] xxxl:mx-[14.71%] xxl:mx-[9.71%] xl:mx-[5.71%] md:mx-[12px]">
-        <h1 class="font-semibold text-[clamp(35px,6vw,56px)] text-white">Blogs</h1>
-        <ul class="flex items-center justify-center gap-[10px] text-white">
-            <li><a href="{{ route('home') }}" class="text-edyellow">Home</a></li>
-            <li><span class="text-[12px]"><i class="fa-solid fa-angle-double-right"></i></span></li>
-            <li>Blogs</li>
-        </ul>
-    </div>
-
-    <div class="vectors">
-        <img src="{{ asset('web/img/breadcrumb-vector-1.svg') }}" alt="vector" class="absolute -z-[1] pointer-events-none bottom-[34px] left-0 xl:left-auto xl:right-[90%]">
-        <img src="{{ asset('web/img/breadcrumb-vector-2.svg') }}" alt="vector" class="absolute -z-[1] pointer-events-none bottom-0 right-0 xl:right-auto xl:left-[60%]">
-    </div>
-</section>
-<!-- BREADCRUMB SECTION END -->
-
-
-<!-- MAIN CONTENT START -->
-<div class="ed-event-details-content py-[120px] xl:py-[80px] md:py-[60px]">
-    <div class="mx-[19.71%] xxxl:mx-[14.71%] xxl:mx-[9.71%] xl:mx-[5.71%] md:mx-[12px]">
-        <div class="grid grid-cols-3 md:grid-cols-2 xs:grid-cols-1 gap-[30px] lg:gap-[15px]">
-            <!-- single news -->
-            <div>
-                <!-- img -->
-                <div class="rounded-[8px] overflow-hidden">
-                    <img src="{{ asset('web/img/blog-inner-1.jpg') }}" alt="News Image" class="w-full aspect-[450/294] object-cover">
-                </div>
-
-                <!-- txt -->
-                <div class="bg-white mx-[20px] lg:mx-[15px] shadow-[0_4px_25px_rgba(0,0,0,0.06)] p-[25px] lg:p-[20px] rounded-[8px] -mt-[67px] relative">
-                    <span class="inline-block mb-[10px] font-medium text-edgray2">MARCH 24, 2024</span>
-                    <h5><a href="{{ route('blog.details') }}" class="font-semibold text-[24px] lg:text-[22px] sm:text-[20px] leading-[142%] hover:text-edpurple">Peer pressure changes how teens tackle</a></h5>
-                    <div class="flex justify-between items-center border-t border-[#D9D9D9] pt-[30px] md:pt-[20px] mt-[33px] md:mt-[23px]">
-                        <div class="flex items-center gap-[10px]">
-                            <img src="{{ asset('web/img/user-2.png') }}" alt="Blog Author Image" class="w-[44px] aspect-square rounded-full">
-                            <div>
-                                <h6 class="font-medium text-[16px] leading-[1.3]">Admin</h6>
-                                <span class="text-[14px] text-edgray">Co Founder</span>
-                            </div>
-                        </div>
-                        <a href="{{ route('blog.details') }}" class="text-edpurple text-[18px] hover:text-black"><i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- single news -->
-            <div>
-                <!-- img -->
-                <div class="rounded-[8px] overflow-hidden">
-                    <img src="{{ asset('web/img/blog-inner-2.jpg') }}" alt="News Image" class="w-full aspect-[450/294] object-cover">
-                </div>
-
-                <!-- txt -->
-                <div class="bg-white mx-[20px] lg:mx-[15px] shadow-[0_4px_25px_rgba(0,0,0,0.06)] p-[25px] lg:p-[20px] rounded-[8px] -mt-[67px] relative">
-                    <span class="inline-block mb-[10px] font-medium text-edgray2">MARCH 24, 2024</span>
-                    <h5><a href="{{ route('blog.details') }}" class="font-semibold text-[24px] lg:text-[22px] sm:text-[20px] leading-[142%] hover:text-edpurple">Best and fastest data
-                            server ever</a></h5>
-                    <div class="flex justify-between items-center border-t border-[#D9D9D9] pt-[30px] md:pt-[20px] mt-[33px] md:mt-[23px]">
-                        <div class="flex items-center gap-[10px]">
-                            <img src="{{ asset('web/img/user-2.png') }}" alt="Blog Author Image" class="w-[44px] aspect-square rounded-full">
-                            <div>
-                                <h6 class="font-medium text-[16px] leading-[1.3]">Admin</h6>
-                                <span class="text-[14px] text-edgray">Co Founder</span>
-                            </div>
-                        </div>
-                        <a href="{{ route('blog.details') }}" class="text-edpurple text-[18px] hover:text-black"><i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- single news -->
-            <div>
-                <!-- img -->
-                <div class="rounded-[8px] overflow-hidden">
-                    <img src="{{ asset('web/img/program-2.jpg') }}" alt="News Image" class="w-full aspect-[450/294] object-cover">
-                </div>
-
-                <!-- txt -->
-                <div class="bg-white mx-[20px] lg:mx-[15px] shadow-[0_4px_25px_rgba(0,0,0,0.06)] p-[25px] lg:p-[20px] rounded-[8px] -mt-[67px] relative">
-                    <span class="inline-block mb-[10px] font-medium text-edgray2">MARCH 24, 2024</span>
-                    <h5><a href="{{ route('blog.details') }}" class="font-semibold text-[24px] lg:text-[22px] sm:text-[20px] leading-[142%] hover:text-edpurple">Monday Night Concert In Lake View Mountain City</a></h5>
-                    <div class="flex justify-between items-center border-t border-[#D9D9D9] pt-[30px] md:pt-[20px] mt-[33px] md:mt-[23px]">
-                        <div class="flex items-center gap-[10px]">
-                            <img src="{{ asset('web/img/user-2.png') }}" alt="Blog Author Image" class="w-[44px] aspect-square rounded-full">
-                            <div>
-                                <h6 class="font-medium text-[16px] leading-[1.3]">Admin</h6>
-                                <span class="text-[14px] text-edgray">Co Founder</span>
-                            </div>
-                        </div>
-                        <a href="{{ route('blog.details') }}" class="text-edpurple text-[18px] hover:text-black"><i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- single news -->
-            <div>
-                <!-- img -->
-                <div class="rounded-[8px] overflow-hidden">
-                    <img src="{{ asset('web/img/program-3.jpg') }}" alt="News Image" class="w-full aspect-[450/294] object-cover">
-                </div>
-
-                <!-- txt -->
-                <div class="bg-white mx-[20px] lg:mx-[15px] shadow-[0_4px_25px_rgba(0,0,0,0.06)] p-[25px] lg:p-[20px] rounded-[8px] -mt-[67px] relative">
-                    <span class="inline-block mb-[10px] font-medium text-edgray2">MARCH 24, 2024</span>
-                    <h5><a href="{{ route('blog.details') }}" class="font-semibold text-[24px] lg:text-[22px] sm:text-[20px] leading-[142%] hover:text-edpurple">Peer pressure changes how teens tackle</a></h5>
-                    <div class="flex justify-between items-center border-t border-[#D9D9D9] pt-[30px] md:pt-[20px] mt-[33px] md:mt-[23px]">
-                        <div class="flex items-center gap-[10px]">
-                            <img src="{{ asset('web/img/user-2.png') }}" alt="Blog Author Image" class="w-[44px] aspect-square rounded-full">
-                            <div>
-                                <h6 class="font-medium text-[16px] leading-[1.3]">Admin</h6>
-                                <span class="text-[14px] text-edgray">Co Founder</span>
-                            </div>
-                        </div>
-                        <a href="{{ route('blog.details') }}" class="text-edpurple text-[18px] hover:text-black"><i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- single news -->
-            <div>
-                <!-- img -->
-                <div class="rounded-[8px] overflow-hidden">
-                    <img src="{{ asset('web/img/program-1.jpg') }}" alt="News Image" class="w-full aspect-[450/294] object-cover">
-                </div>
-
-                <!-- txt -->
-                <div class="bg-white mx-[20px] lg:mx-[15px] shadow-[0_4px_25px_rgba(0,0,0,0.06)] p-[25px] lg:p-[20px] rounded-[8px] -mt-[67px] relative">
-                    <span class="inline-block mb-[10px] font-medium text-edgray2">MARCH 24, 2024</span>
-                    <h5><a href="{{ route('blog.details') }}" class="font-semibold text-[24px] lg:text-[22px] sm:text-[20px] leading-[142%] hover:text-edpurple">Peer pressure changes how teens tackle</a></h5>
-                    <div class="flex justify-between items-center border-t border-[#D9D9D9] pt-[30px] md:pt-[20px] mt-[33px] md:mt-[23px]">
-                        <div class="flex items-center gap-[10px]">
-                            <img src="{{ asset('web/img/user-2.png') }}" alt="Blog Author Image" class="w-[44px] aspect-square rounded-full">
-                            <div>
-                                <h6 class="font-medium text-[16px] leading-[1.3]">Admin</h6>
-                                <span class="text-[14px] text-edgray">Co Founder</span>
-                            </div>
-                        </div>
-                        <a href="{{ route('blog.details') }}" class="text-edpurple text-[18px] hover:text-black"><i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- single news -->
-            <div>
-                <!-- img -->
-                <div class="rounded-[8px] overflow-hidden">
-                    <img src="{{ asset('web/img/blog-inner-1.jpg') }}" alt="News Image" class="w-full aspect-[450/294] object-cover">
-                </div>
-
-                <!-- txt -->
-                <div class="bg-white mx-[20px] lg:mx-[15px] shadow-[0_4px_25px_rgba(0,0,0,0.06)] p-[25px] lg:p-[20px] rounded-[8px] -mt-[67px] relative">
-                    <span class="inline-block mb-[10px] font-medium text-edgray2">MARCH 24, 2024</span>
-                    <h5><a href="{{ route('blog.details') }}" class="font-semibold text-[24px] lg:text-[22px] sm:text-[20px] leading-[142%] hover:text-edpurple">Peer pressure changes how teens tackle</a></h5>
-                    <div class="flex justify-between items-center border-t border-[#D9D9D9] pt-[30px] md:pt-[20px] mt-[33px] md:mt-[23px]">
-                        <div class="flex items-center gap-[10px]">
-                            <img src="{{ asset('web/img/user-2.png') }}" alt="Blog Author Image" class="w-[44px] aspect-square rounded-full">
-                            <div>
-                                <h6 class="font-medium text-[16px] leading-[1.3]">Admin</h6>
-                                <span class="text-[14px] text-edgray">Co Founder</span>
-                            </div>
-                        </div>
-                        <a href="{{ route('blog.details') }}" class="text-edpurple text-[18px] hover:text-black"><i class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
+    <!-- BREADCRUMB SECTION START -->
+    <section
+        style="padding-top: 327px; padding-bottom: 158px; text-align: center; background: url('{{ asset('web/img/breadcrumb-bg.jpg') }}') no-repeat center center / cover; position: relative; z-index: 1; overflow: hidden;"
+        class="xl:pt-[287px] lg:pt-[237px] sm:pt-[200px] xxs:pt-[180px] xl:pb-[118px] lg:pb-[98px] sm:pb-[68px] xs:pb-[48px] before:absolute before:-z-[1] before:inset-0 before:bg-edblue/70 before:pointer-events-none">
+        <div class="mx-[19.71%] xxxl:mx-[14.71%] xxl:mx-[9.71%] xl:mx-[5.71%] md:mx-[12px]">
+            <h1 class="font-semibold text-[clamp(35px,6vw,56px)] text-white">Blogs</h1>
+            <ul class="flex items-center justify-center gap-[10px] text-white">
+                <li><a href="{{ route('home') }}" class="text-edyellow">Home</a></li>
+                <li><span class="text-[12px]"><i class="fa-solid fa-angle-double-right"></i></span></li>
+                <li>Blogs</li>
+            </ul>
         </div>
 
-
-        <!-- PAGINATION START -->
-        <div class="flex items-center gap-[20px] pt-[60px] justify-center text-[16px]">
-            <a href="#" class="hover:text-edpurple"><i class="fa-solid fa-arrow-left-long"></i></a>
-            <div class="ed-pagination flex gap-[10px] items-center">
-                <a href="#" class="border border-[#d9d9d9] rounded-full w-[50px] h-[50px] flex items-center justify-center text-etBlack hover:bg-edpurple hover:border-edpurple hover:text-white active">01</a>
-                <a href="#" class="border border-[#d9d9d9] rounded-full w-[50px] h-[50px] flex items-center justify-center text-etBlack hover:bg-edpurple hover:border-edpurple hover:text-white">02</a>
-                <a href="#" class="border border-[#d9d9d9] rounded-full w-[50px] h-[50px] flex items-center justify-center text-etBlack hover:bg-edpurple hover:border-edpurple hover:text-white">03</a>
-            </div>
-            <a href="#" class="hover:text-edpurple"><i class="fa-solid fa-arrow-right-long"></i></a>
+        <div class="vectors">
+            <img src="{{ asset('web/img/breadcrumb-vector-1.svg') }}" alt="vector"
+                class="absolute -z-[1] pointer-events-none bottom-[34px] left-0 xl:left-auto xl:right-[90%]">
+            <img src="{{ asset('web/img/breadcrumb-vector-2.svg') }}" alt="vector"
+                class="absolute -z-[1] pointer-events-none bottom-0 right-0 xl:right-auto xl:left-[60%]">
         </div>
-        <!-- PAGINATION END -->
+    </section>
+    <!-- BREADCRUMB SECTION END -->
+
+
+    <!-- MAIN CONTENT START -->
+    <div class="ed-event-details-content py-[120px] xl:py-[80px] md:py-[60px]">
+        <div class="mx-[19.71%] xxxl:mx-[14.71%] xxl:mx-[9.71%] xl:mx-[5.71%] md:mx-[12px]">
+            <div class="grid grid-cols-3 md:grid-cols-2 xs:grid-cols-1 gap-[30px] lg:gap-[15px]">
+                @foreach ($blogs as $blog)
+                    <div
+                        class="et-blog bg-white border border-[#E5E5E5] rounded-[8px] p-[24px] lg:p-[20px] sm:p-[18px] relative group">
+                        <div class="ed-blog__img relative z-[1] mb-[45px]">
+                            <div class="overflow-hidden rounded-[6px]">
+                                <img src="{{ $blog->image ? asset('storage/' . $blog->image) : asset('web/img/blog-1.png') }}"
+                                    alt="blog image"
+                                    class="w-full aspect-[37/24] object-cover transition duration-[400ms] group-hover:scale-105">
+                            </div>
+
+                            @php
+                                $date = \Carbon\Carbon::parse($blog->date);
+                                $day = $date->format('d');
+                                $month = $date->format('M');
+                                $year = $date->format('Y');
+                            @endphp
+
+                            <div
+                                class="bg-white absolute left-[20px] bottom-0 translate-y-[50%] rounded-[10px] font-bold text-[14px] text-black inline-block uppercase overflow-hidden text-center shadow-[0_4px_30px_rgba(0,0,0,0.08)]">
+                                <span class="bg-edyellow text-white block py-[3px] rounded-[10px]">{{ $day }}
+                                    {{ $month }}</span>
+                                <span class="px-[11px] py-[2px] block">{{ $year }}</span>
+                            </div>
+                        </div>
+
+                        <div class="et-blog__txt">
+                            <div class="et-blog__infos flex gap-x-[30px] mb-[13px]">
+                                <!-- single info -->
+                                <div class="et-blog-info flex items-center gap-x-[10px]">
+                                    <span class="icon"><img src="{{ asset('web/img/icon/user.svg') }}"
+                                            alt="icon"></span>
+                                    <span class="text font-medium text-[14px] text-edgray">By {{ $blog->author }}</span>
+                                </div>
+
+                                <!-- single info -->
+                                <div class="et-blog-info flex items-center gap-x-[10px]">
+                                    <span class="icon"><img src="{{ asset('web/img/icon/tag.svg') }}"
+                                            alt="icon"></span>
+                                    <span class="text font-medium text-[14px] text-edgray">{{ $blog->category }}</span>
+                                </div>
+                            </div>
+
+                            <h4 class="et-blog__title text-[20px] sm:text-[18px] font-semibold leading-[1.6] mb-[20px]"><a
+                                    href="{{ route('blog.details') }}" class="hover:text-edpurple">{{ $blog->title }}</a>
+                            </h4>
+
+                            <a href="{{ route('blog.details') }}"
+                                class="font-semibold text-[16px] text-edgray inline-flex items-center gap-[10px] hover:text-edpurple">Read
+                                More <span><i class="fa-solid fa-arrow-right-long"></i></span></a>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+
+
+            <!-- PAGINATION START -->
+            @if ($blogs->hasPages())
+                <div class="flex items-center gap-[20px] pt-[60px] justify-center text-[16px]">
+                    <!-- Previous Page Link -->
+                    @if ($blogs->onFirstPage())
+                        <span class="text-gray-400 cursor-not-allowed">
+                            <i class="fa-solid fa-arrow-left-long"></i>
+                        </span>
+                    @else
+                        <a href="{{ $blogs->previousPageUrl() }}" class="hover:text-edpurple">
+                            <i class="fa-solid fa-arrow-left-long"></i>
+                        </a>
+                    @endif
+
+                    <!-- Pagination Links -->
+                    <div class="ed-pagination flex gap-[10px] items-center">
+                        @foreach ($blogs->links()->elements[0] as $page => $url)
+                            @if ($page == $blogs->currentPage())
+                                <span
+                                    class="border border-[#d9d9d9] rounded-full w-[50px] h-[50px] flex items-center justify-center text-white bg-edpurple">
+                                    {{ $page }}
+                                </span>
+                            @else
+                                <a href="{{ $url }}"
+                                    class="border border-[#d9d9d9] rounded-full w-[50px] h-[50px] flex items-center justify-center text-etBlack hover:bg-edpurple hover:border-edpurple hover:text-white">
+                                    {{ $page }}
+                                </a>
+                            @endif
+                        @endforeach
+                    </div>
+
+                    <!-- Next Page Link -->
+                    @if ($blogs->hasMorePages())
+                        <a href="{{ $blogs->nextPageUrl() }}" class="hover:text-edpurple">
+                            <i class="fa-solid fa-arrow-right-long"></i>
+                        </a>
+                    @else
+                        <span class="text-gray-400 cursor-not-allowed">
+                            <i class="fa-solid fa-arrow-right-long"></i>
+                        </span>
+                    @endif
+                </div>
+            @endif
+            <!-- PAGINATION END -->
+
+        </div>
     </div>
-</div>
-<!-- MAIN CONTENT END -->
+    <!-- MAIN CONTENT END -->
 @endsection

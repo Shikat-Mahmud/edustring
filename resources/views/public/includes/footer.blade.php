@@ -84,7 +84,7 @@
                     <a href="{{ route('gallery') }}"
                         class="flex items-center gap-[10px] opacity-80 hover:text-edyellow"><span class="icon"><img
                                 src="{{ asset('web/img/double-arrow.svg') }}" alt="icon"></span> Gallery</a>
-                    <a href="{{ route('blogs') }}"
+                    <a href="{{ route('our.blogs') }}"
                         class="flex items-center gap-[10px] opacity-80 hover:text-edyellow"><span class="icon"><img
                                 src="{{ asset('web/img/double-arrow.svg') }}" alt="icon"></span> Blog &
                         News</a>

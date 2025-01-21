@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Public;
 
 use App\Http\Controllers\Controller;
+use App\Models\Blog;
 use App\Models\Gallery;
 use App\Models\Mentor;
 use App\Models\Partner;
@@ -17,8 +18,9 @@ class HomeController extends Controller
         $galleries = Gallery::latest()->get();
         $mentors = Mentor::all();
         $partners = Partner::all();
+        $blogs = Blog::latest()->limit(3)->get();
         
-        return view("public.pages.home", compact('reviews', 'galleries', 'mentors', 'partners'));
+        return view("public.pages.home", compact('reviews', 'galleries', 'mentors', 'partners', 'blogs'));
     }
 
     public function about()
@@ -42,9 +44,10 @@ class HomeController extends Controller
         return view("public.pages.gallery", compact("galleries"));
     }
 
-    public function blogs()
+    public function ourBlogs()
     {
-        return view("public.pages.blogs");
+        $blogs = Blog::latest()->paginate(6);
+        return view("public.pages.blogs", compact("blogs"));
     }
 
     public function blogDetails()
