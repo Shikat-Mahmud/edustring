@@ -18,8 +18,8 @@ class HomeController extends Controller
         $galleries = Gallery::latest()->get();
         $mentors = Mentor::all();
         $partners = Partner::all();
-        $blogs = Blog::latest()->limit(3)->get();
-        
+        $blogs = Blog::where('status', 1)->latest()->limit(3)->get();
+
         return view("public.pages.home", compact('reviews', 'galleries', 'mentors', 'partners', 'blogs'));
     }
 
@@ -46,13 +46,25 @@ class HomeController extends Controller
 
     public function ourBlogs()
     {
-        $blogs = Blog::latest()->paginate(6);
+        $blogs = Blog::where('status', 1)->latest()->paginate(6);
         return view("public.pages.blogs", compact("blogs"));
     }
 
-    public function blogDetails()
+    public function blogDetails(int $id)
     {
-        return view("public.pages.blog_details");
+        $blog = Blog::find($id);
+        $relatedBlogs = Blog::where("category", $blog->category)
+            ->whereNot("id", $id)
+            ->latest()
+            ->limit(3)
+            ->get();
+        // $relatedBlogs = Blog::where("category", 'like', "%{$blog->category}%")
+        //     ->whereNot("id", $id)
+        //     ->latest()
+        //     ->limit(3)
+        //     ->get();
+
+        return view("public.pages.blog_details", compact('blog', 'relatedBlogs'));
     }
 
     public function studyUk()

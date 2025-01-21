@@ -72,10 +72,10 @@
                             </div>
 
                             <h4 class="et-blog__title text-[20px] sm:text-[18px] font-semibold leading-[1.6] mb-[20px]"><a
-                                    href="{{ route('blog.details') }}" class="hover:text-edpurple">{{ $blog->title }}</a>
+                                    href="{{ route('blog.details', $blog->id) }}" class="hover:text-edpurple">{{ $blog->title }}</a>
                             </h4>
 
-                            <a href="{{ route('blog.details') }}"
+                            <a href="{{ route('blog.details', $blog->id) }}"
                                 class="font-semibold text-[16px] text-edgray inline-flex items-center gap-[10px] hover:text-edpurple">Read
                                 More <span><i class="fa-solid fa-arrow-right-long"></i></span></a>
                         </div>

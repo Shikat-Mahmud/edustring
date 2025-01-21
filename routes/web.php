@@ -26,7 +26,7 @@ Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::get('/apply-now', [HomeController::class, 'apply'])->name('apply');
 Route::get('/gallery', [HomeController::class, 'gallery'])->name('gallery');
 Route::get('/our-blogs', [HomeController::class, 'ourBlogs'])->name('our.blogs');
-Route::get('/blog-details', [HomeController::class, 'blogDetails'])->name('blog.details');
+Route::get('/blog-details/{id}', [HomeController::class, 'blogDetails'])->name('blog.details');
 Route::get('/study-in-uk', [HomeController::class, 'studyUk'])->name('study.uk');
 Route::get('/study-in-india', [HomeController::class, 'studyIndia'])->name('study.india');
 Route::get('/study-in-china', [HomeController::class, 'studyChina'])->name('study.china');
