@@ -50,7 +50,7 @@
                 <div class="col-md-6 col-xl-7">
                     <div class="card">
                         <div class="card-header">
-                            <h5>Working for countries</h5>
+                            <h5>Working For Countries</h5>
                         </div>
                         <div class="card-body">
                             <div id="world-map-markers" class="set-map" style="height:365px;"></div>
