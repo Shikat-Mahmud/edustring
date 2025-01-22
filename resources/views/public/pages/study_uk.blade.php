@@ -84,7 +84,7 @@
                         <div class="mt-[50px]">
                             <h5 class="font-semibold text-[22px] text-edblue mb-[17px]">Contact Us for Admission</h5>
                             <hr class="mb-[20px]">
-                            <form action="{{ route('contacts.store') }}" enctype="multipart/form-data" method="POST"
+                            <form action="{{ route('contact.us') }}" enctype="multipart/form-data" method="POST"
                                 class="grid grid-cols-2 xxs:grid-cols-1 gap-[30px] xs:gap-[20px] text-[16px]">
                                 @csrf
                                 <div class="col-span-2 xxs:col-span-1">

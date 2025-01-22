@@ -150,7 +150,7 @@
                     <p class="text-edgray font-normal text-[16px] mb-[38px]">We have professional alliance's with leading
                         Universities and Colleges around the world.</p>
 
-                    <form action="{{ route('contacts.store') }}" enctype="multipart/form-data" method="POST" class="grid grid-cols-2 xxs:grid-cols-1 gap-[30px] xs:gap-[20px] text-[16px]">
+                    <form action="{{ route('contact.us') }}" enctype="multipart/form-data" method="POST" class="grid grid-cols-2 xxs:grid-cols-1 gap-[30px] xs:gap-[20px] text-[16px]">
                         @csrf
                         <div class="col-span-2 xxs:col-span-1">
                             <label for="ed-contact-name" class="font-lato font-semibold text-edblue block mb-[12px]">Your

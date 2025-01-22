@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Public;
 use App\Http\Controllers\Controller;
 use App\Models\Application;
 use App\Models\Blog;
+use App\Models\Contact;
 use App\Models\Gallery;
 use App\Models\Mentor;
 use App\Models\Partner;
@@ -110,6 +111,25 @@ class HomeController extends Controller
             Application::create($validatedData);
 
             return redirect()->back()->with('success', 'Application submitted successfully.');
+        } catch (\Illuminate\Validation\ValidationException $e) {
+            $errorMessage = $e->validator->errors()->first();
+            return redirect()->back()->with('error', $errorMessage);
+        }
+    }
+
+    public function storeContact(Request $request)
+    {
+        try {
+            $validatedData = $request->validate([
+                'name' => 'required|string|max:255',
+                'email' => 'nullable|email|max:255',
+                'phone' => 'required|string|max:15',
+                'message' => 'nullable|string|max:1000',
+            ]);
+
+            Contact::create($validatedData);
+
+            return redirect()->back()->with('success', 'Message sent successfully.');
         } catch (\Illuminate\Validation\ValidationException $e) {
             $errorMessage = $e->validator->errors()->first();
             return redirect()->back()->with('error', $errorMessage);
