@@ -40,44 +40,23 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-
                                         <tr>
-                                            <td>Category</td>
+                                            <td>Student Application </td>
                                             <td>
-                                                <input type="checkbox" name="permissions[]" value="show-category"
+                                                <input type="checkbox" name="permissions[]" value="show-application"
                                                     class="form-check-input">
                                             </td>
                                             <td>
-                                                <input type="checkbox" name="permissions[]" value="create-category"
+                                                <input type="checkbox" name="permissions[]" value="create-application"
                                                     class="form-check-input">
                                             </td>
                                             <td>
-                                                <input type="checkbox" name="permissions[]" value="edit-category"
-                                                    class="form-check-input">
-                                            </td>
-
-                                            <td>
-                                                <input type="checkbox" name="permissions[]" value="delete-category"
-                                                    class="form-check-input">
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Product </td>
-                                            <td>
-                                                <input type="checkbox" name="permissions[]" value="show-product"
-                                                    class="form-check-input">
-                                            </td>
-                                            <td>
-                                                <input type="checkbox" name="permissions[]" value="create-product"
-                                                    class="form-check-input">
-                                            </td>
-                                            <td>
-                                                <input type="checkbox" name="permissions[]" value="edit-product"
+                                                <input type="checkbox" name="permissions[]" value="edit-application"
                                                     class="form-check-input">
                                             </td>
 
                                             <td>
-                                                <input type="checkbox" name="permissions[]" value="delete-product"
+                                                <input type="checkbox" name="permissions[]" value="delete-application"
                                                     class="form-check-input">
                                             </td>
                                         </tr>

@@ -11,13 +11,22 @@ class ApplicationController extends Controller
 {
     public function index()
     {
-        $applications = Application::all();
-        return view('admin.main.application.index', compact('applications'));
+
+        if (auth()->check() && auth()->user()->hasAnyPermission(['create-application', 'show-application', 'edit-application', 'delete-application'])) {
+            $applications = Application::all();
+            return view('admin.main.application.index', compact('applications'));
+        } else {
+            return redirect()->back()->with('error', 'You do not have permission to Applications.');
+        }
     }
 
     public function create()
     {
-        return view('admin.main.application.create');
+        if (auth()->user()->can('create-application')) {
+            return view('admin.main.application.create');
+        } else {
+            return redirect()->back()->with('error', 'You do not have permission to add application.');
+        }
     }
 
     public function store(Request $request)
@@ -55,13 +64,21 @@ class ApplicationController extends Controller
 
     public function show(int $id)
     {
-        $student = Application::findOrFail($id);
-        return view('admin.main.application.show', compact('student'));
+        if (auth()->user()->can('show-application')) {
+            $student = Application::findOrFail($id);
+            return view('admin.main.application.show', compact('student'));
+        } else {
+            return redirect()->back()->with('error', 'You do not have permission to show application.');
+        }
     }
 
     public function edit(Application $application)
     {
-        return view('admin.main.application.edit', compact('application'));
+        if (auth()->user()->can('edit-application')) {
+            return view('admin.main.application.edit', compact('application'));
+        } else {
+            return redirect()->back()->with('error', 'You do not have permission to edit applications.');
+        }
     }
 
 
@@ -99,7 +116,11 @@ class ApplicationController extends Controller
 
     public function destroy(Application $application)
     {
-        $application->delete();
-        return redirect()->back()->with('success', 'Application deleted successfully.');
+        if (auth()->user()->can('delete-application')) {
+            $application->delete();
+            return redirect()->back()->with('success', 'Application deleted successfully.');
+        } else {
+            return redirect()->back()->with('error', 'You do not have permission to delete application.');
+        }
     }
 }

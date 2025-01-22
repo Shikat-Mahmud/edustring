@@ -4,11 +4,15 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Application;
+use App\Models\Blog;
+use App\Models\Contact;
 use App\Models\Invest;
+use App\Models\Mentor;
+use App\Models\Partner;
+use App\Models\Review;
+use App\Models\Subscriber;
 use Illuminate\Http\Request;
 use App\Models\User;
-use App\Models\Category;
-use App\Models\Product;
 use App\Models\ApplicationSetting;
 use Illuminate\Support\Facades\Schema;
 
@@ -44,30 +48,31 @@ class IndexController extends Controller
         
         $models = [
             'User' => User::class,
-            'Category' => Category::class,
-            'Product' => Product::class
+            'Application' => Application::class,
+            'Blog' => Blog::class,
+            'Contact' => Contact::class,
+            'Invest' => Invest::class,
+            'Mentor' => Mentor::class,
+            'Partner' => Partner::class,
+            'Review' => Review::class,
+            'Subscriber' => Subscriber::class,
         ];
 
         $results = [];
 
         foreach ($models as $modelName => $model) {
-            // Get the table name for the model
             $table = (new $model)->getTable();
 
-            // Get the columns for the model's table
             $columns = Schema::getColumnListing($table);
 
-            // Build the query for each model
             $modelQuery = $model::query();
 
             foreach ($columns as $column) {
                 $modelQuery->orWhere($column, 'LIKE', "%{$query}%");
             }
 
-            // Get the results
             $modelResults = $modelQuery->get();
 
-            // Add model name to each result and skip unwanted columns
             foreach ($modelResults as $result) {
                 $filteredResult = $result->toArray();
                 unset($filteredResult['id'], $filteredResult['created_at'], $filteredResult['updated_at']);
@@ -76,7 +81,6 @@ class IndexController extends Controller
             }
         }
 
-        // Return JSON response
         return response()->json($results);
     }
 }

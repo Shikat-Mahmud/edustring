@@ -24,10 +24,13 @@
                             <i class="ph ph-gauge"></i></span><span class="pc-mtext">Dashboard</span></a>
                 </li>
 
-                <li class="pc-item pc-hasmenu">
-                    <a href="{{ route('applications.index') }}" class="pc-link"><span class="pc-micon">
-                            <i class="ph ph-file"></i></span><span class="pc-mtext">Applications</span></a>
-                </li>
+                @if (auth()->check() &&
+                        auth()->user()->hasAnyPermission(['create-application', 'edit-application', 'show-application', 'delete-application']))
+                    <li class="pc-item pc-hasmenu">
+                        <a href="{{ route('applications.index') }}" class="pc-link"><span class="pc-micon">
+                                <i class="ph ph-file"></i></span><span class="pc-mtext">Applications</span></a>
+                    </li>
+                @endif
 
                 <li class="pc-item pc-hasmenu">
                     <a href="{{ route('contacts.index') }}" class="pc-link"><span class="pc-micon">
@@ -74,7 +77,7 @@
                         </span>
                         <span class="pc-mtext">Blogs</span>
                     </a>
-                </li>                
+                </li>
 
                 <li class="pc-item pc-hasmenu">
                     <a href="{{ route('invests.index') }}" class="pc-link"><span class="pc-micon">
@@ -112,7 +115,8 @@
                     <li class="pc-item pc-hasmenu">
                         <a href="#!" class="pc-link"><span class="pc-micon">
                                 <i class="ph ph-shield"></i></span><span class="pc-mtext">Roles &
-                                Permissions</span><span class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
+                                Permissions</span><span class="pc-arrow"><i
+                                    data-feather="chevron-right"></i></span></a>
                         <ul class="pc-submenu">
                             @if (auth()->check() &&
                                     auth()->user()->hasAnyPermission(['set-userRole', 'show-user', 'delete-user']))
@@ -129,38 +133,6 @@
                         </ul>
                     </li>
                 @endif
-
-                {{-- @if (auth()->check() &&
-                        auth()->user()->hasAnyPermission([
-                                'create-category',
-                                'edit-category',
-                                'show-category',
-                                'delete-category',
-                                'create-product',
-                                'edit-product',
-                                'show-product',
-                                'delete-product',
-                            ]))
-                    <li class="pc-item pc-hasmenu">
-                        <a href="#!" class="pc-link"><span class="pc-micon">
-                                <i class="ph ph-list"></i></span><span class="pc-mtext">Menus</span><span
-                                class="pc-arrow"><i data-feather="chevron-right"></i></span></a>
-                        <ul class="pc-submenu">
-                            @if (auth()->check() &&
-                                    auth()->user()->hasAnyPermission(['create-category', 'edit-category', 'show-category', 'delete-category']))
-                                <li class="pc-item">
-                                    <a class="pc-link" href="{{ route('categories.index') }}">Category</a>
-                                </li>
-                            @endif
-                            @if (auth()->check() &&
-                                    auth()->user()->hasAnyPermission(['create-product', 'edit-product', 'show-product', 'delete-product']))
-                                <li class="pc-item">
-                                    <a class="pc-link" href="{{ route('products.index') }}">Product</a>
-                                </li>
-                            @endif
-                        </ul>
-                    </li>
-                @endif --}}
             </ul>
         </div>
     </div>

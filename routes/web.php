@@ -12,8 +12,6 @@ use App\Http\Controllers\Admin\SubscriberController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\SettingsController;
-use App\Http\Controllers\Admin\ProductController;
-use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\IndexController;
 use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Admin\UserController;
@@ -33,14 +31,6 @@ Route::get('/study-in-uk', [HomeController::class, 'studyUk'])->name('study.uk')
 Route::get('/study-in-india', [HomeController::class, 'studyIndia'])->name('study.india');
 Route::get('/study-in-china', [HomeController::class, 'studyChina'])->name('study.china');
 
-
-// Route::get('/', function () {
-//     return view('welcome');
-// })->name('welcome');
-
-// Route::get('/home', function () {
-//     return view('welcome');
-// })->middleware(['auth', 'admin.redirect'])->name('home');
 
 Route::middleware(['auth', 'permission:admin-panel'])->name('admin.')->prefix('admin')->group(function () {
     Route::get('/', [IndexController::class, 'index'])->name('index');
@@ -87,9 +77,6 @@ Route::middleware('auth')->group(function () {
     Route::post('/email-update', [SettingsController::class, 'emailUpdate'])->name('email.update');
 
     Route::get('application-cache-clear', [SettingsController::class, 'cacheClear'])->name('application.cache.clear');
-    
-    Route::resource('categories', CategoryController::class);
-    Route::resource('products', ProductController::class);
 });
 
 require __DIR__ . '/auth.php';

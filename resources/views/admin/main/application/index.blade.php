@@ -11,9 +11,12 @@
                                 <i class="fas fa-table me-1"></i>
                                 Application List
                             </div>
-                            <div>
-                                <a href="{{ route('applications.create') }}" class="btn btn-primary btn-sm">Add Student</a>
-                            </div>
+                            @if (auth()->check() && auth()->user()->hasPermissionTo('create-application'))
+                                <div>
+                                    <a href="{{ route('applications.create') }}" class="btn btn-primary btn-sm">Add
+                                        Student</a>
+                                </div>
+                            @endif
                         </div>
                         <div class="card-body table-border-style">
                             <div class="table-responsive">
@@ -52,23 +55,29 @@
                                                 </td>
                                                 <td>
                                                     <div class="d-flex">
-                                                        <a class="btn btn-secondary btn-sm me-2"
-                                                            href="{{ route('applications.show', $item->id) }}"><i
-                                                                class="ph ph-eye"></i></a>
+                                                        @if (auth()->check() && auth()->user()->hasPermissionTo('show-application'))
+                                                            <a class="btn btn-secondary btn-sm me-2"
+                                                                href="{{ route('applications.show', $item->id) }}"><i
+                                                                    class="ph ph-eye"></i></a>
+                                                        @endif
 
-                                                        <a class="btn btn-info btn-sm me-2"
-                                                            href="{{ route('applications.edit', $item->id) }}"><i
-                                                                class="ph ph-pencil"></i></a>
+                                                        @if (auth()->check() && auth()->user()->hasPermissionTo('edit-application'))
+                                                            <a class="btn btn-info btn-sm me-2"
+                                                                href="{{ route('applications.edit', $item->id) }}"><i
+                                                                    class="ph ph-pencil"></i></a>
+                                                        @endif
 
-                                                        <form class="deleteForm"
-                                                            action="{{ route('applications.destroy', $item->id) }}"
-                                                            method="post">
-                                                            @csrf
-                                                            @method('DELETE')
-                                                            <button type="button"
-                                                                class="btn btn-danger btn-sm btnDelete"><i
-                                                                    class="ph ph-trash"></i></button>
-                                                        </form>
+                                                        @if (auth()->check() && auth()->user()->hasPermissionTo('delete-application'))
+                                                            <form class="deleteForm"
+                                                                action="{{ route('applications.destroy', $item->id) }}"
+                                                                method="post">
+                                                                @csrf
+                                                                @method('DELETE')
+                                                                <button type="button"
+                                                                    class="btn btn-danger btn-sm btnDelete"><i
+                                                                        class="ph ph-trash"></i></button>
+                                                            </form>
+                                                        @endif
                                                     </div>
                                                 </td>
                                             </tr>

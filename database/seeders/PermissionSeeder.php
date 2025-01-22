@@ -16,14 +16,10 @@ class PermissionSeeder extends Seeder
     public function run(): void
     {
         $permissions = [
-            'create-category', 
-            'edit-category', 
-            'show-category', 
-            'delete-category',
-            'create-product', 
-            'edit-product', 
-            'show-product', 
-            'delete-product',
+            'create-application', 
+            'edit-application', 
+            'show-application', 
+            'delete-application',
             'create-role', 
             'edit-role', 
             'delete-role', 
@@ -50,12 +46,10 @@ class PermissionSeeder extends Seeder
         $adminRole = Role::where('name', 'admin')->firstOrFail();
         $adminRole->givePermissionTo([
             'admin-panel',
-            'create-category', 
-            'edit-category', 
-            'show-category',
-            'create-product', 
-            'edit-product', 
-            'show-product', 
+            'create-application', 
+            'edit-application', 
+            'show-application', 
+            'delete-application',
             'admin-profile-edit',
             'admin-profile-update',
             'admin-profile-delete',

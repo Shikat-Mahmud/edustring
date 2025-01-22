@@ -27,6 +27,7 @@
 
     <!-- MAIN CONTENT START -->
     <div class="ed-event-details-content py-[120px] xl:py-[80px] md:py-[60px]">
+        @if (isset($galleries) && count($galleries) > 0)
         <div class="mx-[19.71%] xxxl:mx-[14.71%] xxl:mx-[9.71%] xl:mx-[5.71%] md:mx-[12px]">
             <div class="grid grid-cols-3 md:grid-cols-2 xs:grid-cols-1 gap-[30px] lg:gap-[15px]">
                 @foreach ($blogs as $blog)
@@ -130,6 +131,12 @@
             <!-- PAGINATION END -->
 
         </div>
+        @else
+        <div class="flex items-center justify-center flex-col">
+            <img src="{{ asset('/') }}images/empty.jpg" alt="Photo" style="height: 300px; width: auto; margin-bottom: 20px;">
+            <h5 class="text-center text-secondary">No Blog Found!</h5>
+        </div>
+        @endif
     </div>
     <!-- MAIN CONTENT END -->
 @endsection

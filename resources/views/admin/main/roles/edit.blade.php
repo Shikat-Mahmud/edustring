@@ -81,53 +81,27 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-
-
                                         <tr>
-                                            <td>Category</td>
+                                            <td>Student Application </td>
                                             <td>
                                                 <input type="checkbox" class="form-check-input" name="permissions[]"
-                                                    value="show-category" {{ $role->hasPermissionTo('show-category') ?
+                                                    value="show-application" {{ $role->hasPermissionTo('show-application') ?
                                                 'checked' : '' }}>
                                             </td>
                                             <td>
                                                 <input type="checkbox" class="form-check-input" name="permissions[]"
-                                                    value="create-category" {{ $role->hasPermissionTo('create-category')
-                                                ? 'checked' : '' }}>
-                                            </td>
-                                            <td>
-                                                <input type="checkbox" class="form-check-input" name="permissions[]"
-                                                    value="edit-category" {{ $role->hasPermissionTo('edit-category') ?
-                                                'checked' : '' }}>
-                                            </td>
-
-                                            <td>
-                                                <input type="checkbox" class="form-check-input" name="permissions[]"
-                                                    value="delete-category" {{ $role->hasPermissionTo('delete-category')
-                                                ? 'checked' : '' }}>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Product </td>
-                                            <td>
-                                                <input type="checkbox" class="form-check-input" name="permissions[]"
-                                                    value="show-product" {{ $role->hasPermissionTo('show-product') ?
+                                                    value="create-application" {{ $role->hasPermissionTo('create-application') ?
                                                 'checked' : '' }}>
                                             </td>
                                             <td>
                                                 <input type="checkbox" class="form-check-input" name="permissions[]"
-                                                    value="create-product" {{ $role->hasPermissionTo('create-product') ?
-                                                'checked' : '' }}>
-                                            </td>
-                                            <td>
-                                                <input type="checkbox" class="form-check-input" name="permissions[]"
-                                                    value="edit-product" {{ $role->hasPermissionTo('edit-product') ?
+                                                    value="edit-application" {{ $role->hasPermissionTo('edit-application') ?
                                                 'checked' : '' }}>
                                             </td>
 
                                             <td>
                                                 <input type="checkbox" class="form-check-input" name="permissions[]"
-                                                    value="delete-product" {{ $role->hasPermissionTo('delete-product') ?
+                                                    value="delete-application" {{ $role->hasPermissionTo('delete-application') ?
                                                 'checked' : '' }}>
                                             </td>
                                         </tr>

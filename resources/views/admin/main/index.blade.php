@@ -10,7 +10,7 @@
                         <div class="card-body">
                             <h5 class="text-white">Total Application</h5>
                             <h2 class="text-end text-white"><i
-                                    class="ph ph-file float-start"></i><span>{{$totalApplication}}</span>
+                                    class="ph ph-file float-start"></i><span>{{ $totalApplication }}</span>
                             </h2>
                             {{-- <p class="m-b-0">Completed Orders<span class="float-end">351</span></p> --}}
                         </div>
@@ -20,7 +20,8 @@
                     <div class="card bg-grd-success order-card">
                         <div class="card-body">
                             <h5 class="text-white">Total Admission</h5>
-                            <h2 class="text-end text-white"><i class="ph ph-users float-start"></i><span>{{$totalAdmission}}</span>
+                            <h2 class="text-end text-white"><i
+                                    class="ph ph-users float-start"></i><span>{{ $totalAdmission }}</span>
                             </h2>
                             {{-- <p class="m-b-0">This Month<span class="float-end">213</span></p> --}}
                         </div>
@@ -31,7 +32,7 @@
                         <div class="card-body">
                             <h5 class="text-white">Total Income</h5>
                             <h2 class="text-end text-white"><i
-                                    class="ph ph-money float-start"></i><span>৳{{$totalIncome}}</span></h2>
+                                    class="ph ph-money float-start"></i><span>৳{{ $totalIncome }}</span></h2>
                             {{-- <p class="m-b-0">This Month<span class="float-end">৳5,032</span></p> --}}
                         </div>
                     </div>
@@ -41,7 +42,7 @@
                         <div class="card-body">
                             <h5 class="text-white">Total Invest</h5>
                             <h2 class="text-end text-white"><i
-                                    class="ph ph-coin float-start"></i><span>৳{{$totalInvest}}</span></h2>
+                                    class="ph ph-coin float-start"></i><span>৳{{ $totalInvest }}</span></h2>
                             {{-- <p class="m-b-0">This Month<span class="float-end">৳542</span></p> --}}
                         </div>
                     </div>
@@ -77,7 +78,7 @@
                                 </div>
                                 <div class="media-body ms-3">
                                     <p class="mb-0 text-muted">Total Admissions</p>
-                                    <h5 class="mb-0">{{$totalAdmission}}</h5>
+                                    <h5 class="mb-0">{{ $totalAdmission }}</h5>
                                 </div>
                             </div>
                             <div id="earnings-users-chart"></div>
@@ -215,32 +216,41 @@
                                         <th>Address</th>
                                         <th>Status</th>
                                     </tr>
-                                    @foreach ($latestStudents as $item)
+                                    @if (isset($latestStudents) && count($latestStudents) > 0)
+                                        @foreach ($latestStudents as $item)
+                                            <tr>
+                                                <td>{{ $item->first_name . ' ' . $item->last_name }}</td>
+                                                <td>{{ $item->email }}</td>
+                                                <td>{{ $item->phone }}</td>
+                                                <td>{{ $item->Address ?? '--' }}</td>
+                                                <td>
+                                                    @if ($item->status == 'Initiated')
+                                                        <p class="ml-3 badge bg-primary">{{ $item->status }}</p>
+                                                    @endif
+                                                    @if ($item->status == 'Pending')
+                                                        <p class="ml-3 badge bg-warning">{{ $item->status }}</p>
+                                                    @endif
+                                                    @if ($item->status == 'Success')
+                                                        <p class="ml-3 badge bg-success">{{ $item->status }}</p>
+                                                    @endif
+                                                    @if ($item->status == 'Failed')
+                                                        <p class="ml-3 badge bg-danger">{{ $item->status }}</p>
+                                                    @endif
+                                                    @if ($item->status == 'Cenceled')
+                                                        <p class="ml-3 badge bg-secondary">{{ $item->status }}</p>
+                                                    @endif
+                                                </td>
+                                            </tr>
+                                        @endforeach
+                                    @else
                                         <tr>
-                                            <td>{{ $item->first_name . ' ' . $item->last_name }}</td>
-                                            <td>{{ $item->email }}</td>
-                                            <td>{{ $item->phone }}</td>
-                                            <td>{{ $item->Address ?? '--' }}</td>
-                                            <td>
-                                                @if ($item->status == 'Initiated')
-                                                    <p class="ml-3 badge bg-primary">{{ $item->status }}</p>
-                                                @endif
-                                                @if ($item->status == 'Pending')
-                                                    <p class="ml-3 badge bg-warning">{{ $item->status }}</p>
-                                                @endif
-                                                @if ($item->status == 'Success')
-                                                    <p class="ml-3 badge bg-success">{{ $item->status }}</p>
-                                                @endif
-                                                @if ($item->status == 'Failed')
-                                                    <p class="ml-3 badge bg-danger">{{ $item->status }}</p>
-                                                @endif
-                                                @if ($item->status == 'Cenceled')
-                                                    <p class="ml-3 badge bg-secondary">{{ $item->status }}</p>
-                                                @endif
+                                            <td colspan="5" class="text-center text-secondary">
+                                                <h6>No Application Yet!</h6>
                                             </td>
                                         </tr>
-                                    @endforeach
+                                    @endif
                                 </table>
+
                             </div>
                         </div>
                     </div>
