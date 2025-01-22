@@ -51,9 +51,7 @@
     {{-- toaster --}}
     <link rel="stylesheet" href="{{ asset('/css/toastr.min.css') }}">
     {{-- CKEditor CDN --}}
-    {{-- <script src="https://cdn.ckeditor.com/ckeditor5/23.0.0/classic/ckeditor.js"></script> --}}
     <script src="https://cdn.ckeditor.com/ckeditor5/35.0.1/classic/ckeditor.js"></script>
-
     
     <style>
         .highlight {
