@@ -82,7 +82,7 @@
                                     <label for="content" class="col-md-4">Content: <span
                                             class="text-danger">*</span></label>
                                     <div class="col-md-8">
-                                        <textarea name="content" id="content" class="form-control" rows="6" placeholder="Blog Content" required>{{ $blog->content }}</textarea>
+                                        <textarea name="content" id="content" class="form-control" rows="6" placeholder="Blog Content Here..." required>{{ $blog->content }}</textarea>
                                     </div>
                                 </div>
                                 <div class="row mt-3">
@@ -109,3 +109,25 @@
         </div>
     </section>
 @endsection
+@push('scripts')
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const contentTextarea = document.querySelector('#content');
+        
+        if (!contentTextarea.CKEditorInstance) {
+            ClassicEditor
+                .create(contentTextarea)
+                .then(editor => {
+                    contentTextarea.CKEditorInstance = editor;
+
+                    editor.model.document.on('change:data', () => {
+                        contentTextarea.value = editor.getData();
+                    });
+                })
+                .catch(error => {
+                    console.error('Error initializing CKEditor:', error);
+                });
+        }
+    });
+</script>
+@endpush

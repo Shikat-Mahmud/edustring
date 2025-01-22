@@ -50,6 +50,9 @@
 
     {{-- toaster --}}
     <link rel="stylesheet" href="{{ asset('/css/toastr.min.css') }}">
+    {{-- CKEditor CDN --}}
+    {{-- <script src="https://cdn.ckeditor.com/ckeditor5/23.0.0/classic/ckeditor.js"></script> --}}
+    <script src="https://cdn.ckeditor.com/ckeditor5/35.0.1/classic/ckeditor.js"></script>
 
     
     <style>
@@ -253,10 +256,10 @@
 </script>
 
 {{-- text editor --}}
-<script src="https://cdn.ckeditor.com/4.20.2/standard/ckeditor.js"></script>
+{{-- <script src="https://cdn.ckeditor.com/4.20.2/standard/ckeditor.js"></script>
 <script>
     CKEDITOR.replace('content');
-</script>
+</script> --}}
 
 
 <script src="{{ asset('/js/popper.min.js') }}"
