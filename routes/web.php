@@ -30,6 +30,7 @@ Route::get('/blog-details/{id}', [HomeController::class, 'blogDetails'])->name('
 Route::get('/study-in-uk', [HomeController::class, 'studyUk'])->name('study.uk');
 Route::get('/study-in-india', [HomeController::class, 'studyIndia'])->name('study.india');
 Route::get('/study-in-china', [HomeController::class, 'studyChina'])->name('study.china');
+Route::post('/application-store', [HomeController::class, 'storeApplication'])->name('student.application');
 
 
 // Route::get('/', function () {

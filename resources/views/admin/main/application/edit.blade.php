@@ -65,10 +65,36 @@
                                 </div>
 
                                 <div class="row mt-3">
-                                    <label for="other" class="col-md-4">Students Address </label>
+                                    <label for="address" class="col-md-4">Students Address </label>
                                     <div class="col-md-8">
-                                        <input type="text" name="other" id="other"
-                                            value="{{ $application->other }}" class="form-control" placeholder="Students Address" />
+                                        <input type="text" name="address" id="address" value="{{ $application->address }}" class="form-control"
+                                            placeholder="Students Address" />
+                                    </div>
+                                </div>
+
+                                <div class="row mt-3">
+                                    <label for="amount" class="col-md-4">Amount Received </label>
+                                    <div class="col-md-8">
+                                        <input type="text" name="amount" id="amount" value="{{ $application->amount }}" class="form-control"
+                                            placeholder="Amount Received" />
+                                    </div>
+                                </div>
+
+                                <div class="row mt-3">
+                                    <label for="status" class="col-md-4">Status </label>
+                                    <div class="col-md-8">
+                                        <select name="status" id="status" class="form-control">
+                                            <option value="Initiated"
+                                                {{ $application->status == 'Initiated' ? 'selected' : '' }}>Initiated</option>
+                                            <option value="Pending"
+                                                {{ $application->status == 'Pending' ? 'selected' : '' }}>Pending</option>
+                                            <option value="Success"
+                                                {{ $application->status == 'Success' ? 'selected' : '' }}>Success</option>
+                                            <option value="Failed"
+                                                {{ $application->status == 'Failed' ? 'selected' : '' }}>Failed</option>
+                                            <option value="Canceled"
+                                                {{ $application->status == 'Canceled' ? 'selected' : '' }}>Canceled</option>
+                                        </select>
                                     </div>
                                 </div>
 
@@ -291,6 +317,15 @@
                                         @endif
                                     </div>
                                 </div>
+
+                                <div class="row mt-3">
+                                    <label for="other" class="col-md-4">Other Data <span style="color: #6A7885; font-size: 12px;"> (optional)</span> </label>
+                                    <div class="col-md-8">
+                                        <input type="text" name="other" id="other" value="{{ $application->other }}" class="form-control"
+                                            placeholder="Other Data..." />
+                                    </div>
+                                </div>
+
                                 <div class="row mt-3">
                                     <label for="" class="col-md-4"></label>
                                     <div class="col-md-4 ">

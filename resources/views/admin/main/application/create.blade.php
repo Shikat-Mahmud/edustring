@@ -61,9 +61,9 @@
                                 </div>
 
                                 <div class="row mt-3">
-                                    <label for="other" class="col-md-4">Students Address </label>
+                                    <label for="address" class="col-md-4">Students Address </label>
                                     <div class="col-md-8">
-                                        <input type="text" name="other" id="other" class="form-control"
+                                        <input type="text" name="address" id="address" class="form-control"
                                             placeholder="Students Address" />
                                     </div>
                                 </div>
@@ -177,6 +177,14 @@
                                     <label for="photo" class="col-md-4">Photo</label>
                                     <div class="col-md-8">
                                         <input type="file" name="photo" class="form-control" accept="image/*" />
+                                    </div>
+                                </div>
+
+                                <div class="row mt-3">
+                                    <label for="other" class="col-md-4">Other Data <span style="color: #6A7885; font-size: 12px;"> (optional)</span> </label>
+                                    <div class="col-md-8">
+                                        <input type="text" name="other" id="other" class="form-control"
+                                            placeholder="Other Data..." />
                                     </div>
                                 </div>
 

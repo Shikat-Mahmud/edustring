@@ -35,7 +35,7 @@ class ApplicationController extends Controller
                 'address' => 'nullable|string|max:255',
                 'amount' => 'nullable|string|max:255',
                 'status' => 'nullable|string|max:255',
-                'other' => 'required|string',
+                'other' => 'nullable|string',
                 'photo' => 'nullable|image|mimes:jpg,jpeg,png',
             ]);
 
@@ -46,7 +46,7 @@ class ApplicationController extends Controller
 
             Application::create($validatedData);
 
-            return redirect()->back()->with('success', 'Application submitted successfully.');
+            return redirect()->route('applications.index')->with('success', 'Application submitted successfully.');
         } catch (\Illuminate\Validation\ValidationException $e) {
             $errorMessage = $e->validator->errors()->first();
             return redirect()->back()->with('error', $errorMessage);
@@ -79,7 +79,7 @@ class ApplicationController extends Controller
             'address' => 'nullable|string|max:255',
             'amount' => 'nullable|string|max:255',
             'status' => 'nullable|string|max:255',
-            'other' => 'required|string',
+            'other' => 'nullable|string',
             'photo' => 'nullable|image|mimes:jpg,jpeg,png',
         ]);
 

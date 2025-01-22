@@ -33,15 +33,32 @@
                                                 <td>{{ $item->first_name . ' ' . $item->last_name }}</td>
                                                 <td>{{ $item->email }}</td>
                                                 <td>{{ $item->phone }}</td>
-                                                <td>working</td> 
-                                                {{-- Initiated, Pending, Success, Failed, Canceled --}}
+                                                <td>
+                                                    @if ($item->status == 'Initiated')
+                                                        <p class="ml-3 badge bg-primary">{{ $item->status }}</p>
+                                                    @endif
+                                                    @if ($item->status == 'Pending')
+                                                        <p class="ml-3 badge bg-warning">{{ $item->status }}</p>
+                                                    @endif
+                                                    @if ($item->status == 'Success')
+                                                        <p class="ml-3 badge bg-success">{{ $item->status }}</p>
+                                                    @endif
+                                                    @if ($item->status == 'Failed')
+                                                        <p class="ml-3 badge bg-danger">{{ $item->status }}</p>
+                                                    @endif
+                                                    @if ($item->status == 'Cenceled')
+                                                        <p class="ml-3 badge bg-secondary">{{ $item->status }}</p>
+                                                    @endif
+                                                </td>
                                                 <td>
                                                     <div class="d-flex">
                                                         <a class="btn btn-secondary btn-sm me-2"
-                                                            href="{{ route('applications.show', $item->id) }}"><i class="ph ph-eye"></i></a>
+                                                            href="{{ route('applications.show', $item->id) }}"><i
+                                                                class="ph ph-eye"></i></a>
 
                                                         <a class="btn btn-info btn-sm me-2"
-                                                            href="{{ route('applications.edit', $item->id) }}"><i class="ph ph-pencil"></i></a>
+                                                            href="{{ route('applications.edit', $item->id) }}"><i
+                                                                class="ph ph-pencil"></i></a>
 
                                                         <form class="deleteForm"
                                                             action="{{ route('applications.destroy', $item->id) }}"
@@ -49,7 +66,8 @@
                                                             @csrf
                                                             @method('DELETE')
                                                             <button type="button"
-                                                                class="btn btn-danger btn-sm btnDelete"><i class="ph ph-trash"></i></button>
+                                                                class="btn btn-danger btn-sm btnDelete"><i
+                                                                    class="ph ph-trash"></i></button>
                                                         </form>
                                                     </div>
                                                 </td>

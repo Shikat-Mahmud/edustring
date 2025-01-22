@@ -98,6 +98,56 @@
                                 </div>
                             </div>
 
+                            <div class="row d-flex text-left">
+                                <div class="col-md-4">
+                                    <span>Student Address: </span>
+                                </div>
+                                <div class="col-md-8">
+                                    <p class="ml-3">{{ $student->address ?? 'N/A' }}</p>
+                                </div>
+                            </div>
+
+                            <div class="row d-flex text-left">
+                                <div class="col-md-4">
+                                    <span>Other Data: </span>
+                                </div>
+                                <div class="col-md-8">
+                                    <p class="ml-3">{{ $student->other ?? 'N/A' }}</p>
+                                </div>
+                            </div>
+                            
+                            <div class="row d-flex text-left">
+                                <div class="col-md-4">
+                                    <span>Status: </span>
+                                </div>
+                                <div class="col-md-8">
+                                    @if ($student->status == 'Initiated')
+                                        <p class="ml-3 badge bg-primary">{{ $student->status }}</p>
+                                    @endif
+                                    @if ($student->status == 'Pending')
+                                        <p class="ml-3 badge bg-warning">{{ $student->status }}</p>
+                                    @endif
+                                    @if ($student->status == 'Success')
+                                        <p class="ml-3 badge bg-success">{{ $student->status }}</p>
+                                    @endif
+                                    @if ($student->status == 'Failed')
+                                        <p class="ml-3 badge bg-danger">{{ $student->status }}</p>
+                                    @endif
+                                    @if ($student->status == 'Cenceled')
+                                        <p class="ml-3 badge bg-secondary">{{ $student->status }}</p>
+                                    @endif
+                                </div>
+                            </div>
+                            
+                            <div class="row d-flex text-left">
+                                <div class="col-md-4">
+                                    <span>Amount Received: </span>
+                                </div>
+                                <div class="col-md-8">
+                                    <p class="ml-3"><b>{{ $student->amount ?? 'N/A' }}</b></p>
+                                </div>
+                            </div>
+
                             <br>
                         </div>
                     </div>

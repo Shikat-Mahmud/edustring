@@ -58,7 +58,7 @@
                         Start Your Study Abroad Journey
                     </h1>
 
-                    <form action="{{ route('applications.store') }}" enctype="multipart/form-data" method="POST"
+                    <form action="{{ route('student.application') }}" enctype="multipart/form-data" method="POST"
                         class="grid grid-cols-2 xxs:grid-cols-1 gap-[30px] xs:gap-[20px] text-[16px]">
                         @csrf
                         <!-- First Name -->
