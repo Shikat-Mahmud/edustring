@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Application;
+use App\Models\Invest;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Category;
@@ -19,17 +21,13 @@ class IndexController extends Controller
     public function index()
     {
         if (auth()->user()->can('admin-panel')) {
-            $totalUsers = User::count();
-            $totalCategory = Category::count();
-            $totalProduct = Product::count();
-            $subsetCount = 100;
+            $latestStudents = Application::orderBy('created_at','desc')->take(10)->get();
+            $totalApplication = Application::count();
+            $totalAdmission = Application::where('status', 'Success')->count();
+            $totalIncome = Application::sum('amount');
+            $totalInvest = Invest::sum('amount');
 
-            $peruser = (($totalUsers / $subsetCount) * 100);
-            $percategory = (($totalCategory / $subsetCount) * 100);
-            $perproduct = (($totalProduct / $subsetCount) * 100);
-
-
-            return view('admin.main.index', compact('totalUsers', 'totalCategory', 'totalProduct', 'peruser', 'percategory', 'perproduct'));
+            return view('admin.main.index', compact('latestStudents', 'totalApplication', 'totalAdmission', 'totalIncome', 'totalInvest'));
         } else {
             return redirect()->back()->with('error', 'You do not have permission to go to admin panel.');
         }

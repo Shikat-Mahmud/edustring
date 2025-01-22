@@ -8,48 +8,48 @@
                 <div class="col-md-6 col-xl-3">
                     <div class="card bg-grd-primary order-card">
                         <div class="card-body">
-                            <h6 class="text-white">Orders Received</h6>
+                            <h5 class="text-white">Total Application</h5>
                             <h2 class="text-end text-white"><i
-                                    class="feather icon-shopping-cart float-start"></i><span>486</span>
+                                    class="ph ph-file float-start"></i><span>{{$totalApplication}}</span>
                             </h2>
-                            <p class="m-b-0">Completed Orders<span class="float-end">351</span></p>
+                            {{-- <p class="m-b-0">Completed Orders<span class="float-end">351</span></p> --}}
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-xl-3">
                     <div class="card bg-grd-success order-card">
                         <div class="card-body">
-                            <h6 class="text-white">Total Sales</h6>
-                            <h2 class="text-end text-white"><i class="feather icon-tag float-start"></i><span>1641</span>
+                            <h5 class="text-white">Total Admission</h5>
+                            <h2 class="text-end text-white"><i class="ph ph-users float-start"></i><span>{{$totalAdmission}}</span>
                             </h2>
-                            <p class="m-b-0">This Month<span class="float-end">213</span></p>
+                            {{-- <p class="m-b-0">This Month<span class="float-end">213</span></p> --}}
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-xl-3">
                     <div class="card bg-grd-warning order-card">
                         <div class="card-body">
-                            <h6 class="text-white">Revenue</h6>
+                            <h5 class="text-white">Total Income</h5>
                             <h2 class="text-end text-white"><i
-                                    class="feather icon-repeat float-start"></i><span>$42,562</span></h2>
-                            <p class="m-b-0">This Month<span class="float-end">$5,032</span></p>
+                                    class="ph ph-money float-start"></i><span>৳{{$totalIncome}}</span></h2>
+                            {{-- <p class="m-b-0">This Month<span class="float-end">৳5,032</span></p> --}}
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-xl-3">
                     <div class="card bg-grd-danger order-card">
                         <div class="card-body">
-                            <h6 class="text-white">Total Profit</h6>
+                            <h5 class="text-white">Total Invest</h5>
                             <h2 class="text-end text-white"><i
-                                    class="feather icon-award float-start"></i><span>$9,562</span></h2>
-                            <p class="m-b-0">This Month<span class="float-end">$542</span></p>
+                                    class="ph ph-coin float-start"></i><span>৳{{$totalInvest}}</span></h2>
+                            {{-- <p class="m-b-0">This Month<span class="float-end">৳542</span></p> --}}
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-xl-7">
                     <div class="card">
                         <div class="card-header">
-                            <h5>New Order From United States</h5>
+                            <h5>Working for countries</h5>
                         </div>
                         <div class="card-body">
                             <div id="world-map-markers" class="set-map" style="height:365px;"></div>
@@ -59,7 +59,7 @@
                 <div class="col-md-6 col-xl-5">
                     <div class="card">
                         <div class="card-header d-flex align-items-center justify-content-between py-3">
-                            <h5>New Order From United States</h5>
+                            <h5>Student Admissions</h5>
                             <div class="dropdown">
                                 <a class="avtar avtar-xs btn-link-secondary dropdown-toggle arrow-none" href="#"
                                     data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
@@ -73,11 +73,11 @@
                         <div class="card-body">
                             <div class="media align-items-center">
                                 <div class="avtar avtar-s bg-light-primary flex-shrink-0">
-                                    <i class="ph ph-money f-20"></i>
+                                    <i class="ph ph-users f-20"></i>
                                 </div>
                                 <div class="media-body ms-3">
-                                    <p class="mb-0 text-muted">Total Earnings</p>
-                                    <h5 class="mb-0">$249.95</h5>
+                                    <p class="mb-0 text-muted">Total Admissions</p>
+                                    <h5 class="mb-0">{{$totalAdmission}}</h5>
                                 </div>
                             </div>
                             <div id="earnings-users-chart"></div>
@@ -88,23 +88,23 @@
                             <div class="row">
                                 <div class="col-6">
                                     <div class="media align-items-center">
-                                        <div class="avtar avtar-s bg-grd-primary flex-shrink-0">
+                                        <div class="avtar avtar-s bg-grd-success flex-shrink-0">
                                             <i class="ph ph-money f-20 text-white"></i>
                                         </div>
                                         <div class="media-body ms-2">
-                                            <p class="mb-0 text-muted">Total Profit</p>
-                                            <h6 class="mb-0">$1,783</h6>
+                                            <p class="mb-0 text-muted">Profit This Month</p>
+                                            <h6 class="mb-0">৳1,783</h6>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-6">
                                     <div class="media align-items-center">
-                                        <div class="avtar avtar-s bg-grd-success flex-shrink-0">
-                                            <i class="ph ph-shopping-cart text-white f-20"></i>
+                                        <div class="avtar avtar-s bg-grd-danger flex-shrink-0">
+                                            <i class="ph ph-coin text-white f-20"></i>
                                         </div>
                                         <div class="media-body ms-2">
-                                            <p class="mb-0 text-muted">Product Sold</p>
-                                            <h6 class="mb-0">15,830</h6>
+                                            <p class="mb-0 text-muted">Invest This Month</p>
+                                            <h6 class="mb-0">৳1,783</h6>
                                         </div>
                                     </div>
                                 </div>
@@ -112,11 +112,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6">
+                {{-- <div class="col-md-4 col-sm-6">
                     <div class="card statistics-card-1">
                         <div class="card-body">
-                            <img src="{{ asset('/images/widget/img-status-4.svg') }}"
-                                alt="img" class="img-fluid img-bg">
+                            <img src="{{ asset('/images/widget/img-status-4.svg') }}" alt="img"
+                                class="img-fluid img-bg">
                             <div class="d-flex align-items-center justify-content-between mb-3 drp-div">
                                 <h6 class="mb-0">Daily Sales</h6>
                                 <div class="dropdown">
@@ -144,8 +144,8 @@
                 <div class="col-md-4 col-sm-6">
                     <div class="card statistics-card-1">
                         <div class="card-body">
-                            <img src="{{ asset('/images/widget/img-status-5.svg') }}"
-                                alt="img" class="img-fluid img-bg">
+                            <img src="{{ asset('/images/widget/img-status-5.svg') }}" alt="img"
+                                class="img-fluid img-bg">
                             <div class="d-flex align-items-center justify-content-between mb-3 drp-div">
                                 <h6 class="mb-0">Monthly Sales</h6>
                                 <div class="dropdown">
@@ -173,8 +173,8 @@
                 <div class="col-md-4 col-sm-12">
                     <div class="card statistics-card-1 bg-brand-color-1">
                         <div class="card-body">
-                            <img src="{{ asset('/images/widget/img-status-6.svg') }}"
-                                alt="img" class="img-fluid img-bg">
+                            <img src="{{ asset('/images/widget/img-status-6.svg') }}" alt="img"
+                                class="img-fluid img-bg">
                             <div class="d-flex align-items-center justify-content-between mb-3 drp-div">
                                 <h6 class="mb-0 text-white">Yearly Sales</h6>
                                 <div class="dropdown">
@@ -198,60 +198,48 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
 
                 <div class="col-sm-12">
                     <div class="card table-card">
                         <div class="card-header">
-                            <h5>Recent Orders</h5>
+                            <h5>Recent Students Application</h5>
                         </div>
                         <div class="card-body p-0">
                             <div class="table-responsive">
                                 <table class="table">
                                     <tr>
-                                        <th>Image</th>
-                                        <th>Product Code</th>
-                                        <th>Customer</th>
-                                        <th>Purchased On</th>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Phone</th>
+                                        <th>Address</th>
                                         <th>Status</th>
-                                        <th>Transaction ID</th>
                                     </tr>
-                                    <tr>
-                                        <td><img src="{{ asset('/images/widget/p1.jpg') }}" alt="prod img" class="img-fluid">
-                                        </td>
-                                        <td>PNG002413</td>
-                                        <td>Jane Elliott</td>
-                                        <td>06-01-2017</td>
-                                        <td><span class="badge bg-primary">Shipping</span></td>
-                                        <td>#7234421</td>
-                                    </tr>
-                                    <tr>
-                                        <td><img src="{{ asset('/images/widget/p2.jpg') }}" alt="prod img" class="img-fluid">
-                                        </td>
-                                        <td>PNG002344</td>
-                                        <td>John Deo</td>
-                                        <td>05-01-2017</td>
-                                        <td><span class="badge bg-danger">Failed</span></td>
-                                        <td>#7234486</td>
-                                    </tr>
-                                    <tr>
-                                        <td><img src="{{ asset('/images/widget/p3.jpg') }}" alt="prod img" class="img-fluid">
-                                        </td>
-                                        <td>PNG002653</td>
-                                        <td>Eugine Turner</td>
-                                        <td>04-01-2017</td>
-                                        <td><span class="badge bg-success">Delivered</span></td>
-                                        <td>#7234417</td>
-                                    </tr>
-                                    <tr>
-                                        <td><img src="{{ asset('/images/widget/p4.jpg') }}" alt="prod img" class="img-fluid">
-                                        </td>
-                                        <td>PNG002156</td>
-                                        <td>Jacqueline Howell</td>
-                                        <td>03-01-2017</td>
-                                        <td><span class="badge bg-warning">Pending</span></td>
-                                        <td>#7234454</td>
-                                    </tr>
+                                    @foreach ($latestStudents as $item)
+                                        <tr>
+                                            <td>{{ $item->first_name . ' ' . $item->last_name }}</td>
+                                            <td>{{ $item->email }}</td>
+                                            <td>{{ $item->phone }}</td>
+                                            <td>{{ $item->Address ?? '--' }}</td>
+                                            <td>
+                                                @if ($item->status == 'Initiated')
+                                                    <p class="ml-3 badge bg-primary">{{ $item->status }}</p>
+                                                @endif
+                                                @if ($item->status == 'Pending')
+                                                    <p class="ml-3 badge bg-warning">{{ $item->status }}</p>
+                                                @endif
+                                                @if ($item->status == 'Success')
+                                                    <p class="ml-3 badge bg-success">{{ $item->status }}</p>
+                                                @endif
+                                                @if ($item->status == 'Failed')
+                                                    <p class="ml-3 badge bg-danger">{{ $item->status }}</p>
+                                                @endif
+                                                @if ($item->status == 'Cenceled')
+                                                    <p class="ml-3 badge bg-secondary">{{ $item->status }}</p>
+                                                @endif
+                                            </td>
+                                        </tr>
+                                    @endforeach
                                 </table>
                             </div>
                         </div>
