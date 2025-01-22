@@ -18,5 +18,9 @@ class Application extends Model
         'country',
         'subject',
         'photo',
+        'address',
+        'amount',
+        'status',
+        'other',
     ];
 }

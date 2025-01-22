@@ -253,12 +253,6 @@
 <script src="{{ asset('/js/plugins/rocket-loader.min.js') }}" data-cf-settings="90f9e57eb6fda3c0ef534197-|49" defer>
 </script>
 
-{{-- text editor --}}
-{{-- <script src="https://cdn.ckeditor.com/4.20.2/standard/ckeditor.js"></script>
-<script>
-    CKEDITOR.replace('content');
-</script> --}}
-
 
 <script src="{{ asset('/js/popper.min.js') }}"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">

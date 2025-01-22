@@ -17,7 +17,7 @@ class ApplicationController extends Controller
 
     public function create()
     {
-        //
+        return view('admin.main.application.create');
     }
 
     public function store(Request $request)
@@ -32,6 +32,10 @@ class ApplicationController extends Controller
                 'program' => 'required|string|max:255',
                 'country' => 'nullable|string|max:255',
                 'subject' => 'nullable|string|max:255',
+                'address' => 'nullable|string|max:255',
+                'amount' => 'nullable|string|max:255',
+                'status' => 'nullable|string|max:255',
+                'other' => 'required|string',
                 'photo' => 'nullable|image|mimes:jpg,jpeg,png',
             ]);
 
@@ -72,6 +76,10 @@ class ApplicationController extends Controller
             'program' => 'required|string|max:255',
             'country' => 'nullable|string|max:255',
             'subject' => 'nullable|string|max:255',
+            'address' => 'nullable|string|max:255',
+            'amount' => 'nullable|string|max:255',
+            'status' => 'nullable|string|max:255',
+            'other' => 'required|string',
             'photo' => 'nullable|image|mimes:jpg,jpeg,png',
         ]);
 

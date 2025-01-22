@@ -27,7 +27,7 @@
                                             class="text-danger">*</span></label>
                                     <div class="col-md-8">
                                         <input type="text" name="first_name" id="first_name"
-                                            value="{{ $application->first_name }}" class="form-control" required />
+                                            value="{{ $application->first_name }}" class="form-control" placeholder="First Name" required />
                                     </div>
                                 </div>
                                 
@@ -35,7 +35,7 @@
                                     <label for="last_name" class="col-md-4">Last Name </label>
                                     <div class="col-md-8">
                                         <input type="text" name="last_name" id="last_name"
-                                            value="{{ $application->last_name }}" class="form-control" />
+                                            value="{{ $application->last_name }}" class="form-control" placeholder="Last Name" />
                                     </div>
                                 </div>
 
@@ -44,7 +44,7 @@
                                         class="text-danger">*</span></label>
                                     <div class="col-md-8">
                                         <input type="text" name="phone" id="phone"
-                                            value="{{ $application->phone }}" class="form-control" required/>
+                                            value="{{ $application->phone }}" class="form-control" placeholder="Phone" required/>
                                     </div>
                                 </div>
 
@@ -52,7 +52,7 @@
                                     <label for="whatsapp" class="col-md-4">WhatsApp </label>
                                     <div class="col-md-8">
                                         <input type="text" name="whatsapp" id="whatsapp"
-                                            value="{{ $application->whatsapp }}" class="form-control" />
+                                            value="{{ $application->whatsapp }}" class="form-control" placeholder="WhatsApp" />
                                     </div>
                                 </div>
 
@@ -60,12 +60,20 @@
                                     <label for="email" class="col-md-4">Email </label>
                                     <div class="col-md-8">
                                         <input type="text" name="email" id="email"
-                                            value="{{ $application->email }}" class="form-control" />
+                                            value="{{ $application->email }}" class="form-control" placeholder="Email" />
                                     </div>
                                 </div>
 
                                 <div class="row mt-3">
-                                    <label for="program" class="col-md-4">Program <span
+                                    <label for="other" class="col-md-4">Students Address </label>
+                                    <div class="col-md-8">
+                                        <input type="text" name="other" id="other"
+                                            value="{{ $application->other }}" class="form-control" placeholder="Students Address" />
+                                    </div>
+                                </div>
+
+                                <div class="row mt-3">
+                                    <label for="program" class="col-md-4">Desired Program <span
                                         class="text-danger">*</span></label>
                                     <div class="col-md-8">
                                         <select name="program" id="program" class="form-control" required>
@@ -88,7 +96,7 @@
                                 </div>
 
                                 <div class="row mt-3">
-                                    <label for="country" class="col-md-4">Country <span
+                                    <label for="country" class="col-md-4">Desired Country <span
                                             class="text-danger">*</span></label>
                                     <div class="col-md-8">
                                         <select name="country" id="country" class="form-control">
@@ -114,10 +122,12 @@
                                 </div>
 
                                 <div class="row mt-3">
-                                    <label for="subject" class="col-md-4">Subject <span
+                                    <label for="subject" class="col-md-4">Desired Subject <span
                                             class="text-danger">*</span></label>
                                     <div class="col-md-8">
                                         <select name="subject" id="subject" class="form-control">
+                                            <option value="" disabled {{ !$application->subject ? 'selected' : '' }}>
+                                                Select Desired Subject</option>
                                             <option value="Aeronautical Engineering"
                                                 {{ $application->subject == 'Aeronautical Engineering' ? 'selected' : '' }}>
                                                 Aeronautical Engineering</option>

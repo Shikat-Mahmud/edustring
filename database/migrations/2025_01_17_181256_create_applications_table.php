@@ -22,6 +22,9 @@ return new class extends Migration
             $table->string('country')->nullable();
             $table->string('subject')->nullable();
             $table->string('photo')->nullable();
+            $table->string('address')->nullable();
+            $table->string('amount')->nullable();
+            $table->string('status')->default('Initiated');
             $table->longText('other')->nullable();
             $table->timestamps();
         });

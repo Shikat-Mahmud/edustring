@@ -11,6 +11,9 @@
                                 <i class="fas fa-table me-1"></i>
                                 Application List
                             </div>
+                            <div>
+                                <a href="{{ route('applications.create') }}" class="btn btn-primary btn-sm">Add Student</a>
+                            </div>
                         </div>
                         <div class="card-body table-border-style">
                             <div class="table-responsive">
@@ -20,6 +23,7 @@
                                             <th>Name</th>
                                             <th>Email</th>
                                             <th>Phone</th>
+                                            <th>Status</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -29,6 +33,8 @@
                                                 <td>{{ $item->first_name . ' ' . $item->last_name }}</td>
                                                 <td>{{ $item->email }}</td>
                                                 <td>{{ $item->phone }}</td>
+                                                <td>working</td> 
+                                                {{-- Initiated, Pending, Success, Failed, Canceled --}}
                                                 <td>
                                                     <div class="d-flex">
                                                         <a class="btn btn-secondary btn-sm me-2"
