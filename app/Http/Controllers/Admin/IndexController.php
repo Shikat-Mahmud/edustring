@@ -11,6 +11,7 @@ use App\Models\Mentor;
 use App\Models\Partner;
 use App\Models\Review;
 use App\Models\Subscriber;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\ApplicationSetting;
@@ -25,27 +26,33 @@ class IndexController extends Controller
     public function index()
     {
         if (auth()->user()->can('admin-panel')) {
-            $latestStudents = Application::orderBy('created_at','desc')->take(10)->get();
+            $latestStudents = Application::orderBy('created_at', 'desc')->take(10)->get();
             $totalApplication = Application::count();
             $totalAdmission = Application::where('status', 'Success')->count();
             $totalIncome = Application::sum('amount');
             $totalInvest = Invest::sum('amount');
 
-            return view('admin.main.index', compact('latestStudents', 'totalApplication', 'totalAdmission', 'totalIncome', 'totalInvest'));
+            $lastMonthStart = Carbon::now()->subMonth()->startOfMonth();
+            $lastMonthEnd = Carbon::now()->subMonth()->endOfMonth();
+            $totalLastMonthIncome = Application::whereBetween('created_at', [$lastMonthStart, $lastMonthEnd])->sum('amount');
+            $totalLastMonthInvest = Invest::whereBetween('created_at', [$lastMonthStart, $lastMonthEnd])->sum('amount');
+
+            return view('admin.main.index', compact('latestStudents', 'totalApplication', 'totalAdmission', 'totalIncome', 'totalInvest', 'totalLastMonthIncome', 'totalLastMonthInvest'));
         } else {
             return redirect()->back()->with('error', 'You do not have permission to go to admin panel.');
         }
     }
 
-    public function login(){
-        $general =  ApplicationSetting::latest()->first();
+    public function login()
+    {
+        $general = ApplicationSetting::latest()->first();
         return view('admin.main.users.admin_login', compact('general'));
     }
 
     public function search(Request $request)
     {
         $query = $request->input('query');
-        
+
         $models = [
             'User' => User::class,
             'Application' => Application::class,

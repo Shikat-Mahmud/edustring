@@ -93,8 +93,8 @@
                                             <i class="ph ph-money f-20 text-white"></i>
                                         </div>
                                         <div class="media-body ms-2">
-                                            <p class="mb-0 text-muted">Profit This Month</p>
-                                            <h6 class="mb-0">৳1,783</h6>
+                                            <p class="mb-0 text-muted">Last Month Profit</p>
+                                            <h6 class="mb-0">৳{{$totalLastMonthIncome}}</h6>
                                         </div>
                                     </div>
                                 </div>
@@ -104,8 +104,8 @@
                                             <i class="ph ph-coin text-white f-20"></i>
                                         </div>
                                         <div class="media-body ms-2">
-                                            <p class="mb-0 text-muted">Invest This Month</p>
-                                            <h6 class="mb-0">৳1,783</h6>
+                                            <p class="mb-0 text-muted">Last Month Invest</p>
+                                            <h6 class="mb-0">৳{{$totalLastMonthInvest}}</h6>
                                         </div>
                                     </div>
                                 </div>
