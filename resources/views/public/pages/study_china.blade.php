@@ -44,37 +44,32 @@
                 <div class="left max-w-full grow">
                     <div>
                         <h4
-                            class="font-semibold text-[30px] lg:text-[27px] xs:text-[25px] xxs:text-[23px] text-edblue mb-[23px]">
-                            The Complete Graphic Design for Beginners</h4>
+                            class="font-semibold text-[30px] lg:text-[27px] xs:text-[25px] xxs:text-[23px] text-edblue mb-[23px]">Study In China</h4>
 
                         <!-- tabs container -->
                         <div>
                             <div class="ed-tab duration-[400ms]">
                                 <div>
                                     <h4
-                                        class="font-semibold text-[30px] lg:text-[27px] xs:text-[25px] xxs:text-[23px] text-edblue mt-[28px] mb-[15px]">
-                                        Course Descriptions</h4>
+                                        class="font-semibold text-[25px] lg:text-[20px] xs:text-[18px] xxs:text-[16px] text-edblue mt-[28px] mb-[15px]">Unlock Academic Excellence in China</h4>
                                     <div class="space-y-[10px]">
-                                        <p class="text-edgray">Consectetur adipisicing elit, sed do eiusmod tempor is
-                                            incididunt ut labore et dolore of magna aliqua. Ut enim ad minim veniam, made of
-                                            owl the quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea dolor
-                                            commodo consequat. Duis aute irure and dolor in reprehenderit.</p>
-                                        <p class="text-edgray">The is ipsum dolor sit amet consectetur adipiscing elit.
-                                            Fusce eleifend porta arcu In hac augu ehabitasse the is platea augue thelorem
-                                            turpoi dictumst. In lacus libero faucibus at malesuada sagittis placerat eros
-                                            sed istincidunt augue ac ante rutrum sed the is sodales augue consequat.</p>
+                                        <p class="text-edgray">Choosing China for your education opens doors to world-class universities like Tsinghua, Peking, and Fudan, renowned for their cutting-edge research and innovative teaching. With competitive tuition fees, affordable living costs, and generous government scholarships, quality education becomes accessible to international students. As the world's second-largest economy and a global leader in technology, China offers invaluable exposure to advancing sectors such as artificial intelligence, e-commerce, and renewable energy, equipping you with skills that align with future global demands.</p>
                                     </div>
                                 </div>
 
                                 <div>
                                     <h4
-                                        class="font-semibold text-[30px] lg:text-[27px] xs:text-[25px] xxs:text-[23px] text-edblue mt-[28px] mb-[15px]">
-                                        Requirements for The Course</h4>
+                                        class="font-semibold text-[25px] lg:text-[20px] xs:text-[18px] xxs:text-[16px] text-edblue mt-[28px] mb-[15px]">A Fusion of Culture and Opportunity</h4>
                                     <div class="space-y-[10px]">
-                                        <p class="text-edgray">Nulla facilisi. Vestibulum tristique sem in eros eleifend
-                                            imperdiet. Donec quis convallis neque. In id lacus pulvinar lacus, eget
-                                            vulputate lectus. Ut viverra bibendum lorem, at tempus nibh mattis in. Sed a
-                                            massa eget lacus consequat auctor.</p>
+                                        <p class="text-edgray">Studying in China is a unique cultural journey, blending ancient traditions with modern innovation. Imagine living in ultra-modern cities adorned with ancient temples, where every day is a lesson in cultural immersion. International programs taught in English span diverse disciplines, including engineering, medicine, business, and the arts, ensuring you receive globally recognized qualifications. Learning Mandarin Chinese – the most spoken language worldwide – further enhances your competitive edge in the global job market, particularly as China expands its international business presence.</p>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <h4
+                                        class="font-semibold text-[25px] lg:text-[20px] xs:text-[18px] xxs:text-[16px] text-edblue mt-[28px] mb-[15px]">Your Future Starts in China</h4>
+                                    <div class="space-y-[10px]">
+                                        <p class="text-edgray">China’s strategic partnerships with leading multinational companies create exceptional internship and career pathways for graduates. High-speed rail networks, a safe environment, and welcoming communities make your learning experience both innovative and comfortable. By building a strong professional network in Asia’s largest economy, you position yourself uniquely for global career opportunities. Take the first step today and explore the unparalleled advantages of studying in China – a destination where academic excellence meets cultural richness and future possibilities are endless.</p>
                                     </div>
                                 </div>
                             </div>

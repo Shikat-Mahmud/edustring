@@ -44,37 +44,33 @@
                 <div class="left max-w-full grow">
                     <div>
                         <h4
-                            class="font-semibold text-[30px] lg:text-[27px] xs:text-[25px] xxs:text-[23px] text-edblue mb-[23px]">
-                            The Complete Graphic Design for Beginners</h4>
+                            class="font-semibold text-[30px] lg:text-[27px] xs:text-[25px] xxs:text-[23px] text-edblue mb-[23px]">Study In India</h4>
 
                         <!-- tabs container -->
                         <div>
                             <div class="ed-tab duration-[400ms]">
                                 <div>
                                     <h4
-                                        class="font-semibold text-[30px] lg:text-[27px] xs:text-[25px] xxs:text-[23px] text-edblue mt-[28px] mb-[15px]">
-                                        Course Descriptions</h4>
+                                        class="font-semibold text-[25px] lg:text-[20px] xs:text-[18px] xxs:text-[16px] text-edblue mt-[28px] mb-[15px]">Your Gateway to Excellence in Indian Education</h4>
                                     <div class="space-y-[10px]">
-                                        <p class="text-edgray">Consectetur adipisicing elit, sed do eiusmod tempor is
-                                            incididunt ut labore et dolore of magna aliqua. Ut enim ad minim veniam, made of
-                                            owl the quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea dolor
-                                            commodo consequat. Duis aute irure and dolor in reprehenderit.</p>
-                                        <p class="text-edgray">The is ipsum dolor sit amet consectetur adipiscing elit.
-                                            Fusce eleifend porta arcu In hac augu ehabitasse the is platea augue thelorem
-                                            turpoi dictumst. In lacus libero faucibus at malesuada sagittis placerat eros
-                                            sed istincidunt augue ac ante rutrum sed the is sodales augue consequat.</p>
+                                        <p class="text-edgray">Embark on a transformative educational journey in India, where ancient wisdom harmonizes with modern innovation. Home to prestigious institutions like the IITs, IIMs, and leading medical colleges, India offers world-class education at remarkably competitive costs. Immerse yourself in a cultural tapestry spanning millennia while connecting with university admissions teams and exploring scholarship opportunities designed for international students. From technology and medicine to yoga and Ayurveda, India’s academic landscape promises excellence across diverse fields, ensuring that your aspirations find the perfect platform to flourish.</p>
                                     </div>
                                 </div>
 
                                 <div>
                                     <h4
-                                        class="font-semibold text-[30px] lg:text-[27px] xs:text-[25px] xxs:text-[23px] text-edblue mt-[28px] mb-[15px]">
-                                        Requirements for The Course</h4>
+                                        class="font-semibold text-[25px] lg:text-[20px] xs:text-[18px] xxs:text-[16px] text-edblue mt-[28px] mb-[15px]">A World-Class Experience Rooted in Diversity</h4>
                                     <div class="space-y-[10px]">
-                                        <p class="text-edgray">Nulla facilisi. Vestibulum tristique sem in eros eleifend
-                                            imperdiet. Donec quis convallis neque. In id lacus pulvinar lacus, eget
-                                            vulputate lectus. Ut viverra bibendum lorem, at tempus nibh mattis in. Sed a
-                                            massa eget lacus consequat auctor.</p>
+                                        <p class="text-edgray">India’s education system stands out with its English-medium instruction, internationally recognized degrees, and vibrant campus environments that celebrate diversity. Imagine studying in state-of-the-art facilities while experiencing the warmth of Indian hospitality, forming lifelong friendships, and building a foundation for a global career. Whether you’re drawn to cutting-edge technology or traditional disciplines, India provides the resources, support, and opportunities to help you succeed. With industry partnerships and evolving research opportunities, Indian institutions prepare students to tackle tomorrow’s global challenges with confidence.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <h4
+                                        class="font-semibold text-[25px] lg:text-[20px] xs:text-[18px] xxs:text-[16px] text-edblue mt-[28px] mb-[15px]">Act Now to Shape Your Future</h4>
+                                    <div class="space-y-[10px]">
+                                        <p class="text-edgray">As multinational companies increasingly turn to India for talent, your degree from an Indian institution can open doors to global success. The Indian education sector is rapidly becoming a hub for innovative courses and career opportunities, making this the ideal time to join its growing community of learners. Take action today by connecting with admission counselors, exploring an array of courses, and unlocking India’s potential as an emerging education superpower. Begin your journey where academic excellence meets cultural richness, and take the first step toward a brighter future in Indian higher education.</p>
                                     </div>
                                 </div>
                             </div>

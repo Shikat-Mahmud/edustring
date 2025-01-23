@@ -44,37 +44,32 @@
                 <div class="left max-w-full grow">
                     <div>
                         <h4
-                            class="font-semibold text-[30px] lg:text-[27px] xs:text-[25px] xxs:text-[23px] text-edblue mb-[23px]">
-                            The Complete Graphic Design for Beginners</h4>
+                            class="font-semibold text-[30px] lg:text-[27px] xs:text-[25px] xxs:text-[23px] text-edblue mb-[23px]">Study In United Kingdom</h4>
 
                         <!-- tabs container -->
                         <div>
                             <div class="ed-tab duration-[400ms]">
                                 <div>
                                     <h4
-                                        class="font-semibold text-[30px] lg:text-[27px] xs:text-[25px] xxs:text-[23px] text-edblue mt-[28px] mb-[15px]">
-                                        Course Descriptions</h4>
+                                        class="font-semibold text-[25px] lg:text-[20px] xs:text-[18px] xxs:text-[16px] text-edblue mt-[28px] mb-[15px]">Your Future in UK Higher Education</h4>
                                     <div class="space-y-[10px]">
-                                        <p class="text-edgray">Consectetur adipisicing elit, sed do eiusmod tempor is
-                                            incididunt ut labore et dolore of magna aliqua. Ut enim ad minim veniam, made of
-                                            owl the quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea dolor
-                                            commodo consequat. Duis aute irure and dolor in reprehenderit.</p>
-                                        <p class="text-edgray">The is ipsum dolor sit amet consectetur adipiscing elit.
-                                            Fusce eleifend porta arcu In hac augu ehabitasse the is platea augue thelorem
-                                            turpoi dictumst. In lacus libero faucibus at malesuada sagittis placerat eros
-                                            sed istincidunt augue ac ante rutrum sed the is sodales augue consequat.</p>
+                                        <p class="text-edgray">Your journey to world-class education begins in the United Kingdom. Discover prestigious universities, cutting-edge research facilities, and a vibrant cultural experience that will shape your academic and professional life. Seize this opportunity to connect with university admissions teams, explore scholarship options, and join the ranks of thousands of international students who choose the UK each year. With flexible study programs, internationally recognized degrees, and a welcoming environment for global learners, now is the time to start your UK education adventure.</p>
                                     </div>
                                 </div>
 
                                 <div>
                                     <h4
-                                        class="font-semibold text-[30px] lg:text-[27px] xs:text-[25px] xxs:text-[23px] text-edblue mt-[28px] mb-[15px]">
-                                        Requirements for The Course</h4>
+                                        class="font-semibold text-[25px] lg:text-[20px] xs:text-[18px] xxs:text-[16px] text-edblue mt-[28px] mb-[15px]">A Blend of Tradition and Innovation</h4>
                                     <div class="space-y-[10px]">
-                                        <p class="text-edgray">Nulla facilisi. Vestibulum tristique sem in eros eleifend
-                                            imperdiet. Donec quis convallis neque. In id lacus pulvinar lacus, eget
-                                            vulputate lectus. Ut viverra bibendum lorem, at tempus nibh mattis in. Sed a
-                                            massa eget lacus consequat auctor.</p>
+                                        <p class="text-edgray">From the state-of-the-art research labs in Manchester to the historic halls of Cambridge, British universities blend centuries-old traditions with modern innovation. Whether you're pursuing breakthrough scientific discoveries, advancing in business, or exploring the creative arts, the UK offers programs tailored to your aspirations. International students benefit from a multicultural campus life, extensive industry partnerships, and valuable post-study work opportunities to launch a global career. With its emphasis on critical thinking, independent research, and practical skills, the UK's education system is a gateway to success, recognized by employers worldwide.</p>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <h4
+                                        class="font-semibold text-[25px] lg:text-[20px] xs:text-[18px] xxs:text-[16px] text-edblue mt-[28px] mb-[15px]">Beyond the Classroom</h4>
+                                    <div class="space-y-[10px]">
+                                        <p class="text-edgray">The UK isn't just about academic excellence; it’s about holistic growth. International students are supported through dedicated services, vibrant campus communities, and a rich array of extracurricular activities. Immerse yourself in a country that has nurtured global leaders, Nobel laureates, and industry pioneers. This is your chance to build a world-class foundation for your ambitions. Take action today and unlock a future of limitless possibilities by choosing the United Kingdom for your higher education.</p>
                                     </div>
                                 </div>
                             </div>
