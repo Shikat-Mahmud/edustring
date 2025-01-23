@@ -134,7 +134,7 @@
 
         <!-- footer bottom -->
         <div class="flex flex-wrap items-center justify-between gap-[15px] pt-[20px] pb-[50px] text-[#d9d9d9]">
-            <p>&copy; All Copyright 2024 by EduString</p>
+            <p>&copy; All Copyright 2024 by Edustring</p>
         </div>
     </div>
 </footer>
