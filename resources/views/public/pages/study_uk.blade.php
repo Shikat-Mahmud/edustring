@@ -30,7 +30,8 @@
         <div class="mx-[19.71%] xxxl:mx-[14.71%] xxl:mx-[9.71%] xl:mx-[5.71%] md:mx-[12px]">
             <!-- cover -->
             <div
-                class="rounded-[8px] overflow-hidden relative z-[2] before:absolute before:inset-0 before:-z-[0] before:bg-edpurple/20 mb-[40px] md:mb-[25px] xs:mb-[15px]">
+                class="rounded-[8px] overflow-hidden relative z-[2] before:absolute before:inset-0 before:-z-[0] mb-[40px] md:mb-[25px] xs:mb-[15px]">
+                {{-- before:bg-edpurple/20 --}}
                 <img src="{{ asset('web/img/study_in_uk_banner.jpg') }}" alt="Course Cover"
                     class="rounded-[8px] w-full aspect-[1170/552]">
 

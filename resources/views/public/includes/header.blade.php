@@ -42,7 +42,7 @@
 
                 <!-- right actions -->
                 <div class="flex items-center gap-x-[60px] xxs:gap-[30px]">
-                    <button class="ed-search-opener-btn group">
+                    {{-- <button class="ed-search-opener-btn group">
                         <svg width="17" height="17" viewBox="0 0 17 17" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <g>
@@ -51,7 +51,7 @@
                                     class="fill-edblue group-hover:fill-edpurple" />
                             </g>
                         </svg>
-                    </button>
+                    </button> --}}
                     <a href="{{ route('apply') }}" class="ed-btn to-go-to-sidebar-in-mobile lg:m-[20px]">apply now</a>
                 </div>
             </div>
