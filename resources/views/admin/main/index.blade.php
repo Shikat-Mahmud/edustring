@@ -60,16 +60,7 @@
                 <div class="col-md-6 col-xl-5">
                     <div class="card">
                         <div class="card-header d-flex align-items-center justify-content-between py-3">
-                            <h5>Student Admissions</h5>
-                            <div class="dropdown">
-                                <a class="avtar avtar-xs btn-link-secondary dropdown-toggle arrow-none" href="#"
-                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
-                                        class="material-icons-two-tone f-18">more_vert</i></a>
-                                <div class="dropdown-menu dropdown-menu-end">
-                                    <a class="dropdown-item" href="#">View</a>
-                                    <a class="dropdown-item" href="#">Edit</a>
-                                </div>
-                            </div>
+                            <h5>Student Admissions of Last 12 Months</h5>
                         </div>
                         <div class="card-body">
                             <div class="media align-items-center">
@@ -203,8 +194,9 @@
 
                 <div class="col-sm-12">
                     <div class="card table-card">
-                        <div class="card-header">
+                        <div class="card-header d-flex align-items-center justify-content-between py-3">
                             <h5>Recent Students Application</h5>
+                            <a href="{{ route('applications.index')}}" class="btn btn-sm btn-primary">Application List</i> </a>
                         </div>
                         <div class="card-body p-0">
                             <div class="table-responsive">

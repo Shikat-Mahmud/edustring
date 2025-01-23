@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\PartnerController;
 use App\Http\Controllers\Admin\ReviewController;
 use App\Http\Controllers\Admin\SubscriberController;
 use App\Http\Controllers\ProfileController;
+use App\Models\Application;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\SettingsController;
 use App\Http\Controllers\Admin\IndexController;
@@ -77,6 +78,11 @@ Route::middleware('auth')->group(function () {
     Route::post('/email-update', [SettingsController::class, 'emailUpdate'])->name('email.update');
 
     Route::get('application-cache-clear', [SettingsController::class, 'cacheClear'])->name('application.cache.clear');
+
+    Route::get('/application-data/{startDate}/{endDate}', function ($startDate, $endDate) {
+        $count = Application::where('status', 'Success')->whereBetween('created_at', [$startDate, $endDate])->count();
+        return response()->json(['count' => $count]); 
+    });
 });
 
 require __DIR__ . '/auth.php';
