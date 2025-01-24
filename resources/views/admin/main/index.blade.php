@@ -69,7 +69,7 @@
                                 </div>
                                 <div class="media-body ms-3">
                                     <p class="mb-0 text-muted">Total Admissions</p>
-                                    <h5 class="mb-0">{{ $totalAdmission }}</h5>
+                                    <h5 class="mb-0">{{ $totalAdmissionsLast12Months }}</h5>
                                 </div>
                             </div>
                             <div id="earnings-users-chart"></div>

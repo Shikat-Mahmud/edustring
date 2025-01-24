@@ -37,7 +37,13 @@ class IndexController extends Controller
             $totalLastMonthIncome = Application::whereBetween('created_at', [$lastMonthStart, $lastMonthEnd])->sum('amount');
             $totalLastMonthInvest = Invest::whereBetween('created_at', [$lastMonthStart, $lastMonthEnd])->sum('amount');
 
-            return view('admin.main.index', compact('latestStudents', 'totalApplication', 'totalAdmission', 'totalIncome', 'totalInvest', 'totalLastMonthIncome', 'totalLastMonthInvest'));
+            $startDate = Carbon::now()->subMonths(12)->startOfMonth();
+            $endDate = Carbon::now()->endOfMonth();
+            $totalAdmissionsLast12Months = Application::where('status', 'Success')
+                ->whereBetween('created_at', [$startDate, $endDate])
+                ->count();
+
+            return view('admin.main.index', compact('latestStudents', 'totalApplication', 'totalAdmission', 'totalIncome', 'totalInvest', 'totalLastMonthIncome', 'totalLastMonthInvest', 'totalAdmissionsLast12Months'));
         } else {
             return redirect()->back()->with('error', 'You do not have permission to go to admin panel.');
         }
