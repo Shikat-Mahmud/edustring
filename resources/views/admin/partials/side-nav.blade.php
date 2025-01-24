@@ -7,7 +7,7 @@
                     $settings = generalSettings();
                 @endphp
                 @if ($settings->logo_light)
-                    <img src="{{ asset('storage/' . $settings->logo_light) }}" class="logo-lg" alt="Logo image"
+                    <img src="{{ asset('storage/' . $settings->logo) }}" class="logo-lg" alt="Logo image"
                         style="max-height: 40px; width: auto; max-width: 100%;">
                 @else
                     <img src="https://codedthemes.com/demos/admin-templates/gradient-able/bootstrap/default/assets/images/logo-dark.svg"

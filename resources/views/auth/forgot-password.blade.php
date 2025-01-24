@@ -34,7 +34,7 @@
                 <div class="card">
                     <div class="card-body text-center">
                         <div class="mb-4">
-                            <@php
+                            @php
                                 $settings = generalSettings()
                             @endphp
                             
