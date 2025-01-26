@@ -47,7 +47,7 @@
                                     <label for="review" class="col-md-4" required>Review: <span
                                             class="text-danger">*</span></label>
                                     <div class="col-md-8">
-                                            <textarea name="content" id="content" class="form-control" rows="6" placeholder="Blog Content" required>{{ $review->review }}</textarea>
+                                            <textarea name="review" id="review" class="form-control" rows="6" placeholder="Blog Content" required>{{ $review->review }}</textarea>
                                     </div>
                                 </div>
                                 <div class="row mt-3">
@@ -78,7 +78,7 @@
                                 </div>
                                 <div class="row mt-3">
                                     <div class="col-md-4 ">
-                                        <input type="submit" value="Add" class="btn btn-success">
+                                        <input type="submit" value="Update" class="btn btn-success">
                                     </div>
                                 </div>
                             </form>

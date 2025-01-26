@@ -32,7 +32,7 @@
                 <h2 class="ed-section-title">About Edustring</h2>
 
                 <div class="max-w-[50%] sm:max-w-full mb-[60px]">
-                    <p class="text-edgray2 mb-[25px]">Edustring student consultancy is one of the renowned international
+                    <p class="text-edgray2 mb-[25px] text-justify">Edustring student consultancy is one of the renowned international
                         education consultancy firms which assisting overseas students. <br>
                         The head office of Edustring is located in UK which helps all
                         International students to get admission into top-ranked universities from the United Kingdom, USA,
@@ -78,10 +78,10 @@
                                 </div>
                                 <div>
                                     <h5 class="font-semibold text-[18px] text-black mb-[4px]">Saikat Mahmud</h5>
-                                    <h6 class="text-edgray">Mentor <span class="text-edpurple">Edustring</span></h6>
+                                    <h6 class="text-edgray">Consultant <span class="text-edpurple">Edustring</span></h6>
                                 </div>
                             </div>
-                            <a href="mailto:contact@edustring.com" class="ed-btn gap-[10px]">message mentor <span class="icon"><i
+                            <a href="mailto:contact@edustring.com" class="ed-btn gap-[10px]">message consultant <span class="icon"><i
                                         class="fa-solid fa-arrow-right-long"></i></span></a>
                         </div>
                     </div>

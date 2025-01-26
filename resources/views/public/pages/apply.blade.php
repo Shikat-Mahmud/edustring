@@ -109,7 +109,6 @@
                                 <option value="Bachelor">Bachelor</option>
                                 <option value="Masters">Masters</option>
                                 <option value="Diploma">Diploma</option>
-                                <option value="Certificate">Certificate</option>
                                 <option value="PhD">PhD</option>
                                 <option value="Others">Others</option>
                             </select>
@@ -203,7 +202,7 @@
                         <!-- Photo Upload -->
                         <div class="col-span-2 xxs:col-span-1">
                             <label for="ed-photo" class="font-lato font-semibold text-edblue block mb-[12px]">Upload Your
-                                Photo</label>
+                                Resume</label>
                             <input type="file" name="photo" id="ed-photo"
                                 class="border border-[#ECECEC] h-[55px] px-[20px] xs:px-[15px] rounded-[4px] w-full focus:outline-none">
                         </div>

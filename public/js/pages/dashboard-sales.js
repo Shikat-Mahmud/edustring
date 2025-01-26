@@ -103,6 +103,7 @@ function floatchart() {
                 console.error('Error fetching data:', error);
             });
 
-        document.getElementById('earnings-users-chart').parentNode.insertBefore(yearSpanElement, document.getElementById('earnings-users-chart'));
+        const chartElement = document.getElementById('earnings-users-chart');
+        chartElement.parentNode.insertBefore(chartElement, chartElement.nextSibling);
     })();
 }

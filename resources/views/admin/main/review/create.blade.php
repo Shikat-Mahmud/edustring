@@ -45,7 +45,7 @@
                                     <label for="review" class="col-md-4" required>Review: <span
                                             class="text-danger">*</span></label>
                                     <div class="col-md-8">
-                                            <textarea name="Review" id="Review" class="form-control"
+                                            <textarea name="review" id="review" class="form-control"
                                             placeholder="Review" rows="6" required></textarea>
                                     </div>
                                 </div>

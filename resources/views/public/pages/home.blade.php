@@ -251,20 +251,6 @@
                 <!-- cards -->
                 <div
                     class="grid grid-cols-3 sm:grid-cols-2 xxs:grid-cols-1 gap-[24px] -mt-[140px] lg:mt-[25px] w-[66%] ml-auto lg:w-[100%]">
-                    <!-- single process -->
-                    <div class="bg-white rounded-[10px] p-[24px] shadow-[0_4px_50px_rgba(0,0,0,0.09)]">
-                        <span class="icon block mb-[13px]">
-                            <img src="{{ asset('web/img/admission-process-icon.svg') }}" alt="admission process"
-                                class="mb-[11px]">
-                        </span>
-                        <h4 class="font-semibold text-[18px] mb-[5px] text-edblue"><a href="#"
-                                class="hover:text-edpurple">Request Info</a></h4>
-                        <p class="text-edgray2 group-hover:text-black mb-[18px]">Reach out for detailed program
-                            information.</p>
-                        <a href="#"
-                            class="ed-btn !h-[40px] !bg-white border !border-edpurple !text-edpurple !text-[14px] !font-semibold hover:!bg-edpurple hover:!text-white">Read
-                            More</a>
-                    </div>
 
                     <!-- single process -->
                     <div class="bg-white rounded-[10px] p-[24px] shadow-[0_4px_50px_rgba(0,0,0,0.09)]">
@@ -276,9 +262,23 @@
                                 class="hover:text-edpurple">Apply Online</a></h4>
                         <p class="text-edgray2 group-hover:text-black mb-[18px]">Complete the application form digitally.
                         </p>
-                        <a href="#"
-                            class="ed-btn !h-[40px] !bg-white border !border-edpurple !text-edpurple !text-[14px] !font-semibold hover:!bg-edpurple hover:!text-white">Read
-                            More</a>
+                        <!--<a href="#"-->
+                        <!--    class="ed-btn !h-[40px] !bg-white border !border-edpurple !text-edpurple !text-[14px] !font-semibold hover:!bg-edpurple hover:!text-white">Read-->
+                        <!--    More</a>-->
+                    </div>
+                    
+                                        <!-- single process -->
+                    <div class="bg-white rounded-[10px] p-[24px] shadow-[0_4px_50px_rgba(0,0,0,0.09)]">
+                        <span class="icon block mb-[13px]">
+                            <img src="{{ asset('web/img/admission-process-icon.svg') }}" alt="admission process"
+                                class="mb-[11px]">
+                        </span>
+                        <h4 class="font-semibold text-[18px] mb-[5px] text-edblue"><a href="#"
+                                class="hover:text-edpurple">Choose Course</a></h4>
+                        <p class="text-edgray2 group-hover:text-black mb-[18px]">Bachelor, Masters, PhD and others.</p>
+                        <!--<a href="#"-->
+                        <!--    class="ed-btn !h-[40px] !bg-white border !border-edpurple !text-edpurple !text-[14px] !font-semibold hover:!bg-edpurple hover:!text-white">Read-->
+                        <!--    More</a>-->
                     </div>
 
                     <!-- single process -->
@@ -291,9 +291,9 @@
                                 class="hover:text-edpurple">Submit Form</a></h4>
                         <p class="text-edgray2 group-hover:text-black mb-[18px]">Finalize and send your application form.
                         </p>
-                        <a href="#"
-                            class="ed-btn !h-[40px] !bg-white border !border-edpurple !text-edpurple !text-[14px] !font-semibold hover:!bg-edpurple hover:!text-white">Read
-                            More</a>
+                        <!--<a href="#"-->
+                        <!--    class="ed-btn !h-[40px] !bg-white border !border-edpurple !text-edpurple !text-[14px] !font-semibold hover:!bg-edpurple hover:!text-white">Read-->
+                        <!--    More</a>-->
                     </div>
                 </div>
             </div>
@@ -309,8 +309,7 @@
                 <div>
                     <h6 class="ed-section-sub-title">Top Destinations</h6>
                     <h2 class="ed-section-title mb-[19px]">Explore Top Global Study Destinations</h2>
-                    <p class="mb-[31px]">We collaborate with top-quality partners across a wide range of destinations
-                        worldwide.
+                    <p class="mb-[31px]">We collaborate with top-quality universities across worldwide.
                         This ensures students have access to the best educational opportunities globally.</p>
 
                     <div class="flex flex-wrap gap-x-[24px] gap-y-[15px]">
@@ -365,7 +364,7 @@
 
                         <div>
                             <h6 class="font-semibold text-[30px] text-edblue mb-[5px]">India</h6>
-                            <p class="text-edgray">Experience World-Class Education in India.</p>
+                            <p class="text-edgray">Experience Cheapest High Quality Education in India.</p>
                         </div>
                     </div>
 
@@ -381,7 +380,7 @@
 
                         <div>
                             <h6 class="font-semibold text-[30px] text-edblue mb-[5px]">China</h6>
-                            <p class="text-edgray">Discover Excellence in Education with China.</p>
+                            <p class="text-edgray">Discover Full Funded cholarship, Excellence in Education with China.</p>
                         </div>
                     </div>
                 </div>
@@ -488,7 +487,8 @@
                                         </div>
 
                                         <p class="text-[#445375] font-normal mb-[21px]">
-                                            {{ Str::limit($review->review, 120) }}
+                                            <!--{{ Str::limit($review->review, 120) }}-->
+                                            {{ $review->review }}
                                         </p>
 
                                         <!-- rating stars -->
@@ -518,28 +518,28 @@
 
 
     <!-- GALLERY SECTION START -->
-    <div class="overflow-hidden">
-        <div class="mx-[19.71%] xxxl:mx-[14.71%] xxl:mx-[9.71%] xl:mx-[5.71%] md:mx-[12px]">
-            <h5
-                class="font-semibold text-[24px] text-edblue text-center mb-[40px] relative z-[1] before:absolute before:-z-[1] before:w-[100%] before:h-[1px] before:left-0 before:top-[50%] before:bg-[#D9D9D9] before:-translate-y-[50%]">
-                <span class="bg-white px-[20px]">Our Gallery</span>
-            </h5>
+    <!--<div class="overflow-hidden">-->
+    <!--    <div class="mx-[19.71%] xxxl:mx-[14.71%] xxl:mx-[9.71%] xl:mx-[5.71%] md:mx-[12px]">-->
+    <!--        <h5-->
+    <!--            class="font-semibold text-[24px] text-edblue text-center mb-[40px] relative z-[1] before:absolute before:-z-[1] before:w-[100%] before:h-[1px] before:left-0 before:top-[50%] before:bg-[#D9D9D9] before:-translate-y-[50%]">-->
+    <!--            <span class="bg-white px-[20px]">Our Gallery</span>-->
+    <!--        </h5>-->
 
             <!-- gallery slider -->
-            <div class="ed-gallery-slider swiper overflow-visible">
-                <div class="swiper-wrapper">
-                    @foreach ($galleries as $gallery)
-                        <div class="swiper-slide max-w-max">
-                            <a href="{{ asset('storage/' . $gallery->photo) }}" data-fslightbox="gallery"
-                                class="block rounded-[40px] overflow-hidden"><img
-                                    src="{{ asset('storage/' . $gallery->photo) }}" alt="Gallery image"
-                                    class="object-cover" style="height: 300px; width: 500px;"></a>
-                        </div>
-                    @endforeach
-                </div>
-            </div>
-        </div>
-    </div>
+    <!--        <div class="ed-gallery-slider swiper overflow-visible">-->
+    <!--            <div class="swiper-wrapper">-->
+    <!--                @foreach ($galleries as $gallery)-->
+    <!--                    <div class="swiper-slide max-w-max">-->
+    <!--                        <a href="{{ asset('storage/' . $gallery->photo) }}" data-fslightbox="gallery"-->
+    <!--                            class="block rounded-[40px] overflow-hidden"><img-->
+    <!--                                src="{{ asset('storage/' . $gallery->photo) }}" alt="Gallery image"-->
+    <!--                                class="object-cover" style="height: 300px; width: 500px;"></a>-->
+    <!--                    </div>-->
+    <!--                @endforeach-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </div>-->
+    <!--</div>-->
     <!-- GALLERY SECTION END -->
 
 
@@ -551,7 +551,7 @@
                 class="flex flex-wrap xs:flex-col xs:text-center justify-between items-center gap-y-[15px] mb-[46px] md:mb-[30px]">
                 <div>
                     <h6 class="ed-section-sub-title">Our Expert</h6>
-                    <h2 class="ed-section-title">Our Expert Mentor</h2>
+                    <h2 class="ed-section-title">Our Expert Consultants</h2>
                 </div>
             </div>
 
