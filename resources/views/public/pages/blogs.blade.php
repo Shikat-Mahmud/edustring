@@ -27,7 +27,7 @@
 
     <!-- MAIN CONTENT START -->
     <div class="ed-event-details-content py-[120px] xl:py-[80px] md:py-[60px]">
-        @if (isset($galleries) && count($galleries) > 0)
+        @if (isset($blogs) && count($blogs) > 0)
         <div class="mx-[19.71%] xxxl:mx-[14.71%] xxl:mx-[9.71%] xl:mx-[5.71%] md:mx-[12px]">
             <div class="grid grid-cols-3 md:grid-cols-2 xs:grid-cols-1 gap-[30px] lg:gap-[15px]">
                 @foreach ($blogs as $blog)
