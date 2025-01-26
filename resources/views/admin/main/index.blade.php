@@ -212,9 +212,9 @@
                                         @foreach ($latestStudents as $item)
                                             <tr>
                                                 <td>{{ $item->first_name . ' ' . $item->last_name }}</td>
-                                                <td>{{ $item->email }}</td>
+                                                <td>{{ $item->email ?? '--' }}</td>
                                                 <td>{{ $item->phone }}</td>
-                                                <td>{{ $item->Address ?? '--' }}</td>
+                                                <td>{{ $item->address ?? '--' }}</td>
                                                 <td>
                                                     @if ($item->status == 'Initiated')
                                                         <p class="ml-3 badge bg-primary">{{ $item->status }}</p>
@@ -228,7 +228,7 @@
                                                     @if ($item->status == 'Failed')
                                                         <p class="ml-3 badge bg-danger">{{ $item->status }}</p>
                                                     @endif
-                                                    @if ($item->status == 'Cenceled')
+                                                    @if ($item->status == 'Canceled')
                                                         <p class="ml-3 badge bg-secondary">{{ $item->status }}</p>
                                                     @endif
                                                 </td>

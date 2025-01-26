@@ -104,72 +104,8 @@
                                     <label for="subject" class="col-md-4">Desired Subject <span
                                             class="text-danger">*</span></label>
                                     <div class="col-md-8">
-                                        <select name="subject" id="subject" class="form-control">
-                                            <option value="" disabled selected>Select Desired Subject</option>
-                                            <option value="Aeronautical Engineering">Aeronautical Engineering</option>
-                                            <option value="Automobile Engineering">Automobile Engineering</option>
-                                            <option value="Civil Engineering">Civil Engineering</option>
-                                            <option value="Computer Science and Engineering">Computer Science and
-                                                Engineering</option>
-                                            <option value="Biotechnology Engineering">Biotechnology Engineering</option>
-                                            <option value="Electrical and Electronics Engineering">Electrical and
-                                                Electronics Engineering</option>
-                                            <option value="Electronics and Communication Engineering">Electronics and
-                                                Communication Engineering</option>
-                                            <option value="Automation and Robotics">Automation and Robotics</option>
-                                            <option value="Petroleum Engineering">Petroleum Engineering</option>
-                                            <option value="Instrumentation Engineering">Instrumentation Engineering
-                                            </option>
-                                            <option value="Ceramic Engineering">Ceramic Engineering</option>
-                                            <option value="Chemical Engineering">Chemical Engineering</option>
-                                            <option value="Structural Engineering">Structural Engineering</option>
-                                            <option value="Transportation Engineering">Transportation Engineering</option>
-                                            <option value="Construction Engineering">Construction Engineering</option>
-                                            <option value="Power Engineering">Power Engineering</option>
-                                            <option value="Robotics Engineering">Robotics Engineering</option>
-                                            <option value="Textile Engineering">Textile Engineering</option>
-                                            <option value="Information Technology">Information Technology</option>
-                                            <option value="Architecture">Architecture</option>
-                                            <option value="Nursing">Nursing</option>
-                                            <option value="Pharmacy">Pharmacy</option>
-                                            <option value="Computer Applications">Computer Applications</option>
-                                            <option value="Interior Design">Interior Design</option>
-                                            <option value="Bachelor of Dental Surgery">Bachelor of Dental Surgery</option>
-                                            <option value="Animation, Graphics and Multimedia">Animation, Graphics and
-                                                Multimedia</option>
-                                            <option value="B.Sc. – Nutrition &amp; Dietetics">B.Sc. – Nutrition &amp;
-                                                Dietetics</option>
-                                            <option value="Physiotherapy">Physiotherapy</option>
-                                            <option value="Applied Geology">Applied Geology</option>
-                                            <option value="Liberal Arts">Liberal Arts</option>
-                                            <option value="Physics">Physics</option>
-                                            <option value="Chemistry">Chemistry</option>
-                                            <option value="Mathematics">Mathematics</option>
-                                            <option value="BBA">BBA</option>
-                                            <option value="MBA">MBA</option>
-                                            <option value="Fine Arts">Fine Arts</option>
-                                            <option value="Event Management">Event Management</option>
-                                            <option value="Integrated Law Course- BA + LL.B">Integrated Law Course- BA +
-                                                LL.B</option>
-                                            <option value="Journalism and Mass Communication">Journalism and Mass
-                                                Communication</option>
-                                            <option value="Fashion Designing">Fashion Designing</option>
-                                            <option value="Social Work">Social Work</option>
-                                            <option value="Travel and Tourism Management">Travel and Tourism Management
-                                            </option>
-                                            <option value="Aviation Courses">Aviation Courses</option>
-                                            <option value="Hospitality and Hotel Administration">Hospitality and Hotel
-                                                Administration</option>
-                                            <option value="Design">Design</option>
-                                            <option value="Performing Arts">Performing Arts</option>
-                                            <option value="History">History</option>
-                                            <option value="in Economics">in Economics</option>
-                                            <option value="LLB">LLB</option>
-                                            <option value="LLM">LLM</option>
-                                            <option value="English">English</option>
-                                            <option value="MBBS">MBBS</option>
-                                            <option value="Others">Others</option>
-                                        </select>
+                                        <input type="text" name="subject" id="subject" class="form-control"
+                                            placeholder="Desired Subject" />
                                     </div>
                                 </div>
 
@@ -181,7 +117,8 @@
                                 </div>
 
                                 <div class="row mt-3">
-                                    <label for="other" class="col-md-4">Other Data <span style="color: #6A7885; font-size: 12px;"> (optional)</span> </label>
+                                    <label for="other" class="col-md-4">Other Data <span
+                                            style="color: #6A7885; font-size: 12px;"> (optional)</span> </label>
                                     <div class="col-md-8">
                                         <input type="text" name="other" id="other" class="form-control"
                                             placeholder="Other Data..." />
