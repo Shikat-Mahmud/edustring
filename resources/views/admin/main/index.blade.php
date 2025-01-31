@@ -32,8 +32,8 @@
                         <div class="card-body">
                             <h5 class="text-white">Total Income</h5>
                             <h2 class="text-end text-white"><i
-                                    class="ph ph-money float-start"></i><span>৳{{ $totalIncome }}</span></h2>
-                            {{-- <p class="m-b-0">This Month<span class="float-end">৳5,032</span></p> --}}
+                                    class="ph ph-money float-start"></i><span>£{{ $totalIncome }}</span></h2>
+                            {{-- <p class="m-b-0">This Month<span class="float-end">£5,032</span></p> --}}
                         </div>
                     </div>
                 </div>
@@ -42,8 +42,8 @@
                         <div class="card-body">
                             <h5 class="text-white">Total Invest</h5>
                             <h2 class="text-end text-white"><i
-                                    class="ph ph-coin float-start"></i><span>৳{{ $totalInvest }}</span></h2>
-                            {{-- <p class="m-b-0">This Month<span class="float-end">৳542</span></p> --}}
+                                    class="ph ph-coin float-start"></i><span>£{{ $totalInvest }}</span></h2>
+                            {{-- <p class="m-b-0">This Month<span class="float-end">£542</span></p> --}}
                         </div>
                     </div>
                 </div>
@@ -85,7 +85,7 @@
                                         </div>
                                         <div class="media-body ms-2">
                                             <p class="mb-0 text-muted">Last Month Profit</p>
-                                            <h6 class="mb-0">৳{{$totalLastMonthIncome}}</h6>
+                                            <h6 class="mb-0">£{{$totalLastMonthIncome}}</h6>
                                         </div>
                                     </div>
                                 </div>
@@ -96,7 +96,7 @@
                                         </div>
                                         <div class="media-body ms-2">
                                             <p class="mb-0 text-muted">Last Month Invest</p>
-                                            <h6 class="mb-0">৳{{$totalLastMonthInvest}}</h6>
+                                            <h6 class="mb-0">£{{$totalLastMonthInvest}}</h6>
                                         </div>
                                     </div>
                                 </div>
